@@ -17,7 +17,7 @@ const Main = () => {
     const scrollToEvents = () => {
         eventsRef.current?.scrollIntoView({ 
             behavior: 'smooth',
-            block: 'start'
+            // block: 'start'
         });
     };
 

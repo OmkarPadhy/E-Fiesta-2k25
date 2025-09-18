@@ -12,7 +12,7 @@ const Developer = () => {
       image: 'https://i.postimg.cc/ht48wzF1/img.jpg',
       linkedin: 'https://www.linkedin.com/in/kumar-prasannajit-sahu',
       snapchat: 'https://www.snapchat.com/add/ashwini_biswal',
-      twitter: 'https://twitter.com/KumarSahu',
+      instagram: 'https://www.instagram.com/kumarprasannajit_?igsh=MWU4aWFseHFrOHhucQ==',
       team: 'Full Stack Team'
     },
     {

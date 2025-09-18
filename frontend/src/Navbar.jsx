@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { useAuth } from './context/Authcontext';
 import './navbar.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-  // You can keep useAuth even if not used now; it won't render login/profile
-  const { user } = useAuth() || {};
 
   const toggleMenu = () => {
     setIsOpen(prev => !prev);
