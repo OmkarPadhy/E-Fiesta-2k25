@@ -58,7 +58,7 @@ const Sports = () => {
     { title: 'Satolia (ECE Only)', image: 'https://upload.wikimedia.org/wikipedia/commons/b/be/Dabba_Kali2.jpg', description: 'Seven stones (traditional Indian outdoor game).', formLink: 'https://forms.gle/BFDkr2QN4KfeFSBi8', comingSoon: false },
     { title: "Smash n' Dash", image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXRnKM7rn9bIKH2g_28DbaISKrGomLfBTpPQ&s', description: 'Badminton matches.', formLink: 'https://forms.gle/Dfh5EXMERiPg9eDQA', comingSoon: false },
     { title: 'Volley Vibes', image: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=2000&auto=format&fit=crop', description: 'Volleyball competition.', formLink: 'https://forms.gle/QEQNtDUsq15X98Cj8', comingSoon: false },
-    { title: 'Khel Kabaddi (ECE Only)', image: 'https://sc0.blr1.cdn.digitaloceanspaces.com/article/204120-pjgcfidsfz-1729917365.jpg', description: 'Traditional kabaddi match.', formLink: '#', comingSoon: true },
+    { title: 'Khel Kabaddi (ECE Only)', image: 'https://sc0.blr1.cdn.digitaloceanspaces.com/article/204120-pjgcfidsfz-1729917365.jpg', description: 'Traditional kabaddi match.', formLink: 'https://forms.gle/5AyAjefWiMqqj3yp9', comingSoon: false },
     { title: 'Street Champs (Gully Football)', image: 'https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=2067&auto=format&fit=crop', description: 'Gully football event.', formLink: '#', comingSoon: true }
   ];
 

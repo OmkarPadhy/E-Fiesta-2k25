@@ -312,7 +312,7 @@ const eventDate = Date.UTC(2025, 9, 11, 2, 30, 0);
                             <h4>Registration Support</h4>
                             <p>Phone: +91 8480776011</p>
                             <p>Phone: +91 8260584377</p>
-                            <p>Email: registration@efiesta.com</p>
+                            <p>Email: efiesta23@gmail.com</p>
                         </div>
                         <div className="contact-column">
                             <h4>Event Related Queries</h4>
