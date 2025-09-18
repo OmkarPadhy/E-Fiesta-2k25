@@ -1,0 +1,118 @@
+/* Gallery Container */
+.gallery-container {
+  padding: 2rem;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Gallery Title */
+.gallery-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Batch Container */
+.batch-container {
+  margin-bottom: 3rem;
+}
+
+/* Batch Title */
+.batch-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Image Train Wrapper */
+.image-train-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Image Train */
+.image-train {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  width: max-content; /* Allow container to be as wide as needed */
+}
+
+/* Image Card */
+.image-card {
+  flex-shrink: 0;
+  width: 300px;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Gallery Image */
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation for left to right movement */
+.move-ltr {
+  animation: scrollLeftToRight 50s linear infinite;
+}
+
+/* Animation for right to left movement */
+.move-rtl {
+  animation: scrollRightToLeft 50s linear infinite;
+}
+
+/* Keyframes for left to right animation */
+@keyframes scrollLeftToRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Move by the width of all images + gaps */
+    transform: translateX(calc(-250px * 10 - 10rem));
+  }
+}
+
+/* Keyframes for right to left animation */
+@keyframes scrollRightToLeft {
+  0% {
+    /* Start from the end position */
+    transform: translateX(calc(-250px * 10 - 10rem));
+  }
+  100% {
+    /* Move to the start position */
+    transform: translateX(0);
+  }
+}
+
+/* Pause animation on hover */
+.batch-container:hover .image-train {
+  animation-play-state: paused;
+}
+
+/* Maximize Effect */
+.image-card.maximized {
+  transform: scale(1.5); /* Enlarges the image */
+  z-index: 10; /* Brings it to the front */
+  position: relative; /* Prevent layout shifts */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Adds visibility enhancement */
+}
+
+/* Smooth transition for maximize effect */
+.image-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}

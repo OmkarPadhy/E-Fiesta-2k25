@@ -1,0 +1,37 @@
+.tshirt-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - var(--navbar-height));
+  text-align: center;
+  background: linear-gradient(135deg, #0a0f1d, #1a2238);
+  color: #ffffff;
+  padding: 2rem;
+}
+
+.tshirt-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.coming-soon {
+  font-size: 2rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #ff9966, #ff5e62);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: pulse 1.8s infinite ease-in-out;
+}
+
+/* Simple glowing animation */
+@keyframes pulse {
+  0% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 0.6; transform: scale(1); }
+}

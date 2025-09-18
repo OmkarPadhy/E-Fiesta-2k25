@@ -1,0 +1,396 @@
+/* ----------------------------
+   NAVBAR (navbar.css)
+   Replace your existing navbar.css with this content
+   ---------------------------- */
+
+/* Root / defaults (optional variables) */
+:root {
+  --nav-height: 3rem;
+  --nav-top-offset: 20px;
+  --nav-bg: rgba(0, 0, 0, 0.308);
+  --nav-bg-mobile: rgba(10, 10, 26, 0.95);
+}
+
+/* ----------------------------
+   Desktop Circular Navigation
+   ---------------------------- */
+nav.circular-nav,
+nav.desktop-nav {
+  width: 55vw;
+  height: var(--nav-height);
+  background: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* logo left, links follow */
+  gap: 22px; /* spacing between logo + items */
+  padding: 0 18px;
+  position: absolute;
+  top: var(--nav-top-offset);
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: var(--shadow);
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+/* Keep the nav items visually centered and compact */
+nav.circular-nav h2,
+nav.desktop-nav h2 {
+  font-size: 1rem;
+  color: var(--light);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}
+
+nav.circular-nav h2:hover,
+nav.desktop-nav h2:hover {
+  transform: scale(1.05);
+}
+
+nav.circular-nav h2 a,
+nav.desktop-nav h2 a {
+  color: var(--light);
+  text-decoration: none;
+  padding: 6px 10px;
+  display: inline-block;
+}
+
+.nav-logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav-logo,
+.nav-logo-link img {
+  height: 40px;
+  max-height: 48px;
+  max-width: 220px;
+  width: auto;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+}
+
+.circular-nav .nav-logo-link {
+  margin-right: 8px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  padding: 10px;
+}
+
+.hamburger span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* active hamburger animation */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* show hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+  /* hide desktop circular nav on mobile */
+  .desktop-nav,
+  .circular-nav {
+    display: none;
+  }
+
+  /* mobile top bar */
+  .mobile-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    padding: 8px 16px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(10, 10, 26, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1200;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    box-sizing: border-box;
+  }
+
+  /* brand text shown in top bar on mobile */
+  .mobile-nav .brand-text {
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: "Orbitron", sans-serif;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+  }
+
+  /* hide any top-bar logo image (we show logo inside the menu) */
+  .mobile-nav .nav-logo,
+  .nav-logo-link img {
+    display: none !important;
+  }
+
+  .nav-logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 6px 0;
+    margin: 0;
+  }
+
+  .mobile-logo,
+  .nav-logo-wrapper .nav-logo,
+  .mobile-nav .nav-logo-link img {
+    height: 36px;
+    max-height: 40px;
+    width: auto;
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Nav overlay that slides in from right; place logo at the very top of this panel */
+  .nav-links {
+    display: flex;
+    position: fixed;
+    top: 64px; /* below the topbar */
+    right: -100%;
+    width: 70%;
+    height: calc(100vh - 64px);
+    flex-direction: column;
+    justify-content: flex-start; /* start at top so logo appears at top */
+    align-items: center;
+    background: var(--nav-bg-mobile);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: right 0.45s cubic-bezier(0.2, 0.9, 0.2, 1);
+    gap: 2rem;
+    list-style: none;
+    z-index: 1150;
+    padding: 2rem 1.25rem;
+    padding-top: 1.6rem; /* space under the menu top */
+    box-sizing: border-box;
+  }
+
+  .nav-links::before {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 12px;
+    background-image: url("https://i.postimg.cc/GpnTJgzG/giet-logo.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.3s ease;
+  }
+
+  .nav-links.active li {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .nav-links a,
+  .nav-links li > a {
+    color: var(--light);
+    text-decoration: none;
+    font-size: 1.15rem;
+    font-weight: 600;
+  }
+
+  .nav-links a:hover {
+    color: var(--primary);
+  }
+
+  /* Staggered animation delays */
+  .nav-links li:nth-child(1) {
+    transition-delay: 0.08s;
+  }
+  .nav-links li:nth-child(2) {
+    transition-delay: 0.12s;
+  }
+  .nav-links li:nth-child(3) {
+    transition-delay: 0.16s;
+  }
+  .nav-links li:nth-child(4) {
+    transition-delay: 0.2s;
+  }
+  .nav-links li:nth-child(5) {
+    transition-delay: 0.24s;
+  }
+
+  /* Safety: limit logo width in small screens */
+  .nav-logo,
+  .nav-logo-link img {
+    max-width: 160px;
+  }
+}
+
+/* Accessibility / focus states */
+.nav-links a:focus,
+nav.circular-nav h2 a:focus {
+  outline: 2px solid rgba(11, 253, 253, 0.12);
+  outline-offset: 4px;
+}
+
+/* Small utility: ensure navbar doesn't get pushed by very large images */
+.nav-logo {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 220px;
+}
+
+/* Desktop nav layout with 3 parts */
+nav.circular-nav.desktop-nav {
+  width: 80vw;
+  max-width: 1200px;
+  height: var(--nav-height);
+  background: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* keep items centered as a group */
+  padding: 0 18px;
+  position: fixed;
+  top: var(--nav-top-offset);
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: var(--shadow);
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+/* Left logo */
+.nav-left {
+  flex: 0 0 auto; /* do not grow, width = content */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  margin-right: 8px; /* small spacing from center group */
+}
+.nav-logo {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Center links */
+.nav-center {
+  flex: 1 1 auto;                
+  display: flex;
+  justify-content: center;       
+  align-items: center;
+  gap: 4rem;   /* ⬅️ increase this value for more spacing */
+  min-width: 0;                  
+}
+
+.nav-center h2 {
+  font-size: 1rem;
+  color: var(--light);
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+.nav-center h2:hover {
+  transform: scale(1.1);
+}
+.nav-center h2 a {
+  color: var(--light);
+  text-decoration: none;
+  display: inline-block;
+  padding: 6px 8px;
+}
+/* Right (profile/login) */
+.nav-right {
+  flex: 0 0 auto; /* do not grow, width = content */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin-left: 8px; /* small spacing from center group */
+}
+.nav-right a {
+  color: var(--light);
+  text-decoration: none;
+  font-size: 1rem;
+}
+.nav-left .nav-logo,
+.nav-logo {
+  height: 42px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  display: inline-block;
+}
+
+.nav-center h2 a::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient);
+  transition: width 0.3s ease;
+}
+
+.nav-center h2 a:hover::after {
+  width: 100%;
+}
+
+
+/* End of navbar.css */

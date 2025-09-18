@@ -1,0 +1,125 @@
+/* Color variables from Main.js */
+:root {
+  --primary-color: #007bff;  /* Example primary color */
+  --secondary-color: #6c757d; /* Example secondary color */
+  --highlight-color: #00b8d4;
+  --login-bg-color: #121212;
+  --login-gradient-start: #1E90FF;
+  --login-gradient-end: #800080;
+  --login-cube-color: rgba(0, 191, 255, 0.7);
+  --login-box-bg: rgba(0, 0, 0, 0.308);
+  --login-box-border: rgba(0, 191, 255, 0.3);
+  --login-icon-color: #00BFFF;
+  --login-text-color: #E0E0E0;
+  --login-input-bg: rgba(255, 255, 255, 0.05);
+  --login-button-bg: #800080;
+  --login-button-hover: #9370DB;
+}
+
+h2{
+  color: linear-gradient(to bottom, #1E90FF, #800080);
+}
+
+.team-section {
+  margin: 3rem 0;
+}
+
+.team-subheading {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+
+/* Apply colors to elements in Developer.css */
+.developer-page {
+  /* background: linear-gradient(to bottom, #f9f9f9, #ffffff);   Light background -  already there*/
+  padding: 80px 0 50px 0;
+  text-align: center;
+  background-color: var(--dark);
+}
+
+.team-heading {
+  font-size: 2.5rem;
+  background: linear-gradient(to bottom, #1E90FF, #800080);
+  background-clip: text; /* Standard */
+  -webkit-background-clip: text; /* Webkit-specific (for older versions of Chrome, Safari) */
+  -ms-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 40px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.member-card {
+  background: #00000089;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.member-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.member-image {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  border-radius: 10%;
+  object-fit: cover;
+  margin-bottom: 25px;
+  border: 5px solid #e0e0e0;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.member-name {
+  font-size: 1.2rem;
+  color: #2c3e50; /* Dark name color */
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.member-designation {
+  font-size: 1.1rem;
+  color: #7f8c8d; /* Gray designation */
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #555;
+  font-size: 1.6rem;
+  transition: color 0.2s ease;
+}
+
+.social-icons a:hover {
+  color: var(--primary-color);  /* Applying the primary color */
+}
+
+/* Fix conflict with profile.css */
+body {
+  display: block !important;
+}
