@@ -51,7 +51,7 @@ const Sports = () => {
   // Events: title, image, description, formLink, comingSoon
   const boysEvents = [
     { title: 'Smash Cricket (ECE Only)', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0qaypv6A8cp8R-VhO3PuA-PGa6ZxHlA5qRQ&s', description: 'Box cricket / turf cricket event.', formLink: 'https://forms.gle/dhQoeZjL9KgDPrz69', comingSoon: false },
-    { title: 'Gully Cricket', image: 'https://images.unsplash.com/photo-1709233955550-1a316eab4974?q=80&w=1974&auto=format&fit=crop', description: 'Street cricket tournament.', formLink: 'https://forms.gle/F77LMU4Snk5D44VF6', comingSoon: false },
+    { title: 'Gully Cricket', image: 'https://i.postimg.cc/gkpqnnt5/Gully-cricket.png', description: 'Street cricket tournament.', formLink: 'https://forms.gle/F77LMU4Snk5D44VF6', comingSoon: false },
     { title: 'Checkmate Clash', image: 'https://images.unsplash.com/photo-1529699211952-734e80c4d42b?q=80&w=2071&auto=format&fit=crop', description: 'Chess tournament.', formLink: 'https://forms.gle/CZQdsSx4RzujqApN8', comingSoon: false },
     { title: 'Striker Shots', image: 'https://images.unsplash.com/photo-1652558973183-a3f046921163?q=80&w=2081&auto=format&fit=crop', description: 'Carrom board competition.', formLink: 'https://forms.gle/EKhA9EqKZyFZFSkP6', comingSoon: false },
     { title: 'Rope Rumble', image: 'https://images.unsplash.com/photo-1692366850335-9415ee4724c8?q=80&w=2166&auto=format&fit=crop', description: 'Tug of war competition.', formLink: 'https://forms.gle/HAz6LAmUVeHXhHjk8', comingSoon: false},
