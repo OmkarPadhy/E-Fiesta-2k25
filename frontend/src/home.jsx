@@ -294,7 +294,7 @@ const eventDate = Date.UTC(2025, 9, 11, 2, 30, 0);
                 <div className="footer-content">
                     <div className="footer-logo-section">
                         <div className="footer-logo">
-                            <img src="https://i.postimg.cc/W1QK35hK/logo.jpg" alt="Fest Logo" />
+                            <img src="https://i.postimg.cc/8c3pC47H/logo.jpg" alt="Fest Logo" />
                         </div>
                         <div className="social-links">
                             {/* <a href="#" className="social-icon" target="_blank"><i class="ri-facebook-circle-fill"></i></a> */}
@@ -334,5 +334,6 @@ const eventDate = Date.UTC(2025, 9, 11, 2, 30, 0);
         </div>
     );
 };
+
 
 export default Main;
