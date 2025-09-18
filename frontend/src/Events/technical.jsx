@@ -13,7 +13,7 @@ const Technical = () => {
       title: 'TechSpark: Ignite Ideas',
       image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop',
       description: 'Idea pitching and presentation competition.',
-      formLink: '#',
+      formLink: 'https://forms.gle/tT6DUZDiVFvKddij7',
       comingSoon: false,
     },
     {
@@ -38,7 +38,6 @@ const Technical = () => {
       comingSoon: false,
     },
 
-    // The rest -> Coming Soon
     {
       title: 'Track-O-Bot',
       image: 'https://images.unsplash.com/photo-1669023414180-4dcf35d943e1?q=80&w=1932&auto=format&fit=crop',
@@ -54,21 +53,21 @@ const Technical = () => {
       comingSoon: true,
     },
     {
-      title: 'Goal-O-Bot',
+      title: 'Task Master',
       image: 'https://ai.thestempedia.com/wp-content/uploads/2023/05/Soccer-Robot-Cover.jpg',
       description: 'Robo-soccer where bots compete to score goals.',
       formLink: '#',
       comingSoon: true,
     },
     {
-      title: 'Bot Bash',
+      title: 'Sand Rover',
       image: 'https://i0.wp.com/roboticsindia.live/wp-content/uploads/2021/03/SAVE_20210324_194657.jpg?resize=800%2C450&ssl=1',
       description: 'Robo-war / combat robot event.',
       formLink: '#',
       comingSoon: true,
     },
     {
-      title: 'Sand Rover',
+      title: 'Line Follower',
       image: 'https://i.ytimg.com/vi/x6S3Y9PMUVs/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBzoDEIURLrMwQMfJluzdmlzrH6tQ',
       description: 'Rover design challenge (individual).',
       formLink: '#',
@@ -78,8 +77,8 @@ const Technical = () => {
       title: 'PowerPlay Proteus',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQedQHm0tG2AkKpIUrLJCrBv5kYvpdnZZ-btA&s',
       description: 'Simulation / design event using Proteus software.',
-      formLink: '#',
-      comingSoon: true,
+      formLink: 'https://forms.gle/AKXhUzbztduv6jp97',
+      comingSoon: false
     },
     {
       title: 'Poster Jam',

@@ -18,43 +18,43 @@ const NonTech = () => {
       title: 'Xplore Quest',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQurEiFw4C5V40uAyA-VBQJwH0id1KRzVW3eg&s',
       description: 'Treasure hunt with logical and fun tasks.',
-      formLink: '#',
-      comingSoon: true
+      formLink: 'https://forms.gle/v58YY3LxjfWuUDRf8',
+      comingSoon: false
     },
     {
       title: 'BGMI',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtlfdp9p1PTPt4Br9EEsrEic70YBF-gxlmwg&s',
       description: 'Mobile gaming competition.',
-      formLink: '#',
-      comingSoon: true
+      formLink: 'https://forms.gle/nJTzwd7m9yFkEe8P8',
+      comingSoon: false
     },
     {
       title: 'Garena Free Fire',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbd6CYFvIaGJR7eWiE8C5O90bTBcrs9OUmcw&s',
       description: 'Mobile gaming competition.',
-      formLink: '#',
-      comingSoon: true
+      formLink: 'https://forms.gle/xjYi3SMRUvVrN64V7',
+      comingSoon: false
     },
     {
       title: 'Call of Duty Mobile',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl1z3tix-iwsfOunz9g4IgwYkBShNTTXFM0w&s',
       description: 'Mobile gaming competition.',
-      formLink: '#',
-      comingSoon: true
+      formLink: 'https://forms.gle/TFAC9AhTSkyNPjf68',
+      comingSoon: false
     },
     {
       title: 'Henna Hues',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV4V3jjaAC4njsW8m5rvLVE9vgg6HA4jVHCA&s',
       description: 'Creative mehendi/henna art contest.',
-      formLink: '#',
-      comingSoon: true
+      formLink: 'https://forms.gle/CVJnBh8iEJm2HHPy8',
+      comingSoon: false
     },
     {
       title: 'Color Splash',
       image: 'https://t4.ftcdn.net/jpg/06/00/22/85/360_F_600228506_xWL2u0Qr8zq0MJFMLyfxNbB02ztObnD0.jpg',
       description: 'Rangoli or creative coloring/design contest.',
-      formLink: '#',
-      comingSoon: true
+      formLink: 'https://forms.gle/DqEjEBDffu2BQS8Y6',
+      comingSoon: false
     },
     {
       title: 'Clay Craze',
@@ -67,22 +67,22 @@ const NonTech = () => {
       title: 'Crafty Cards',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrjJLydjV1UWMU-fXwHHkgiZuDTkKJ-ET1Gg&s',
       description: 'Handmade greeting/creative card competition.',
-      formLink: '#',
-      comingSoon: true
+      formLink: 'https://forms.gle/HETu9oZ4TtTZiF7n6',
+      comingSoon: false
     },
     {
       title: 'Beat the Tune',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQneNZiSKe8Z4QEX2HQNpBSw_mscmXQtWNiqw&s',
       description: 'Identify or mimic songs/music.',
-      formLink: '#',
-      comingSoon: true
+      formLink: 'https://forms.gle/7WDeb4a8JqYrr5s9A',
+      comingSoon: false
     },
     {
       title: 'Art Attack',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgtkEbvRFv8BRi2nN2Iy0t1_iU2YwNH-aWyg&s',
       description: 'Drawing/painting competition.',
-      formLink: '#',
-      comingSoon: true
+      formLink: 'https://forms.gle/sDEE8vmrq1GZ9pj99',
+      comingSoon: false
     },
     {
       title: 'MindTray Challenge',
@@ -116,8 +116,8 @@ const NonTech = () => {
       title: 'Trash to Treasure',
       image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1974&auto=format&fit=crop',
       description: 'Best out of waste creativity challenge.',
-      formLink: '#',
-      comingSoon: true
+      formLink: 'https://forms.gle/yfnoYVJ33XKdzMyY6',
+      comingSoon: false
     }
   ];
 

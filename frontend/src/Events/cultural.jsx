@@ -17,46 +17,39 @@ const Cultural = () => {
   // All events marked comingSoon: true as requested
   const events = [
     {
-      title: 'Solo Singing',
+      title: 'Singing',
       image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=2070&auto=format&fit=crop',
       description: 'Vocal showcase — solo singing competition (all genres).',
-      formLink: '#',
-      comingSoon: true
-    },
-    {
-      title: 'Group Singing',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYV_wPl1ghG0plND_DL0BUmtXcIVfCotkAlw&s',
-      description: 'Ensemble/group vocal performances and harmonies.',
-      formLink: '#',
-      comingSoon: true
+      formLink: 'https://forms.gle/xxeVqMrNsevmHPWz6',
+      comingSoon: false
     },
     {
       title: 'Solo Dance',
       image: 'https://images.unsplash.com/photo-1520731884864-de08adaa59b0?q=80&w=2076&auto=format&fit=crop',
       description: 'Dance solo — perform contemporary or classical styles.',
-      formLink: '#',
-      comingSoon: true
+      formLink: 'https://forms.gle/B6TTJMGVcDRG5vhB7',
+      comingSoon: false
     },
     {
       title: 'Group Dance',
       image: 'https://images.unsplash.com/photo-1520694478166-daaaaec95b69?q=80&w=2070&auto=format&fit=crop',
       description: 'Choreographed group dance (any style).',
-      formLink: '#',
-      comingSoon: true
+      formLink: 'https://forms.gle/UiRMGrhK5TVCG6KfA',
+      comingSoon: false
     },
     {
       title: 'Style Stride (Ramp Show)',
       image: 'https://phenav.com/wp-content/uploads/2024/01/6F3A4916-scaled.jpg',
       description: 'Fashion/ramp walk and styling showcase.',
-      formLink: '#',
-      comingSoon: true
+      formLink: 'https://forms.gle/jMhPYMp7V7HC8KZ98',
+      comingSoon: false
     },
     {
       title: 'Laugh Riot (Stand-up / Mimicry)',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuMhvYX0pM3EOV5MTDRN5KJCjzJIKH8iifFA&s',
       description: 'Stand-up comedy or mimicry — bring the laughs.',
-      formLink: '#',
-      comingSoon: true
+      formLink: 'https://forms.gle/z7noNKSQMbzjbLHq9',
+      comingSoon: false
     },
     {
       title: 'Crowd Craze (Open Stage)',

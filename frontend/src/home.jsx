@@ -306,7 +306,7 @@ const eventDate = Date.UTC(2025, 9, 11, 2, 30, 0);
                     <div className="contact-grid">
                         <div className="contact-column">
                             <h4>Department Contact</h4>
-                            <p>HOD ECE: +91 9876543210</p>
+                            <p>HOD ECE: +91 8594949898</p>
                         </div>
                         <div className="contact-column">
                             <h4>Registration Support</h4>
