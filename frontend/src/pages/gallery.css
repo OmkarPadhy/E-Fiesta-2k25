@@ -1,3 +1,13 @@
+/* gallery.css - updated */
+
+/* Config */
+:root{
+  --gallery-img-width: 350px;
+  --gallery-img-height: 250px;
+  --gallery-gap: 1rem;
+  --scroll-duration: 120s; /* <-- higher = slower. Change this value to adjust speed */
+}
+
 /* Gallery Container */
 .gallery-container {
   padding: 2rem;
@@ -43,18 +53,23 @@
 /* Image Train */
 .image-train {
   display: flex;
-  gap: 1rem;
+  gap: var(--gallery-gap);
   padding: 0.5rem 0;
   width: max-content; /* Allow container to be as wide as needed */
+  /* hint to browser we'll transform this frequently */
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 /* Image Card */
 .image-card {
   flex-shrink: 0;
-  width: 300px;
-  height: 200px;
+  width: var(--gallery-img-width);
+  height: var(--gallery-img-height);
   border-radius: 8px;
   overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  position: relative;
 }
 
 /* Gallery Image */
@@ -64,55 +79,92 @@
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.35s ease;
+  display: block;
 }
 
-/* Animation for left to right movement */
+/* Hover enlarge only on desktop */
+@media (min-width: 768px) {
+  .image-card:hover {
+    transform: scale(1.12);   /* zoom in */
+    z-index: 10;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Animation classes (use transform translate3d for better performance) */
+/* default: slower scrolling using the CSS variable */
 .move-ltr {
-  animation: scrollLeftToRight 50s linear infinite;
+  animation: scrollLeftToRight var(--scroll-duration) linear infinite;
 }
-
-/* Animation for right to left movement */
 .move-rtl {
-  animation: scrollRightToLeft 50s linear infinite;
+  animation: scrollRightToLeft var(--scroll-duration) linear infinite;
 }
 
-/* Keyframes for left to right animation */
+/* Keyframes using translate3d for hardware acceleration */
 @keyframes scrollLeftToRight {
   0% {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    /* Move by the width of all images + gaps */
-    transform: translateX(calc(-250px * 10 - 10rem));
+    transform: translate3d(calc(-1 * (var(--gallery-img-width) + var(--gallery-gap)) * 10), 0, 0);
   }
 }
-
-/* Keyframes for right to left animation */
 @keyframes scrollRightToLeft {
   0% {
-    /* Start from the end position */
-    transform: translateX(calc(-250px * 10 - 10rem));
+    transform: translate3d(calc(-1 * (var(--gallery-img-width) + var(--gallery-gap)) * 10), 0, 0);
   }
   100% {
-    /* Move to the start position */
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
-/* Pause animation on hover */
-.batch-container:hover .image-train {
-  animation-play-state: paused;
+/* Pause animation on hover (desktop) */
+@media (min-width: 768px) {
+  .batch-container:hover .image-train {
+    animation-play-state: paused;
+  }
 }
 
-/* Maximize Effect */
+/* Accessibility: respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .move-ltr,
+  .move-rtl,
+  .image-train {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Mobile: disable the continuous scrolling animation to avoid lag */
+@media (max-width: 767px) {
+  .move-ltr,
+  .move-rtl {
+    animation: none !important;
+  }
+
+  /* make images a bit smaller on mobile for layout & performance */
+  :root {
+    --gallery-img-width: 300px;
+    --gallery-img-height: 200px;
+  }
+
+  /* allow touch-friendly spacing */
+  .image-train {
+    gap: 0.75rem;
+  }
+}
+
+/* Optional - maximize effect if you still use `.maximized` class */
 .image-card.maximized {
-  transform: scale(1.5); /* Enlarges the image */
-  z-index: 10; /* Brings it to the front */
-  position: relative; /* Prevent layout shifts */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Adds visibility enhancement */
+  transform: scale(1.5);
+  z-index: 20;
+  position: relative;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Smooth transition for maximize effect */
-.image-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* small utility to ensure smoothness on many images */
+.image-train img {
+  transform-origin: center center;
+  will-change: transform;
 }
