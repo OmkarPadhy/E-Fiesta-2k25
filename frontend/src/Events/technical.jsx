@@ -45,18 +45,11 @@ const Technical = () => {
       comingSoon: false,
     },
     {
-      title: 'Track-O-Bot',
-      image: 'https://images.unsplash.com/photo-1669023414180-4dcf35d943e1?q=80&w=1932&auto=format&fit=crop',
-      description: 'Line follower / maze-solving robot competition.',
-      formLink: '#',
-      comingSoon: true,
-    },
-    {
       title: 'Gizmo Expo',
       image: 'https://images.unsplash.com/photo-1527356900876-cae61d8d8462?q=80&w=2076&auto=format&fit=crop',
       description: 'Showcase innovative gadgets, prototypes, and mini-projects.',
-      formLink: '',
-      comingSoon: true,
+      formLink: 'https://forms.gle/tZA2QE3W5FS7qdEC7',
+      comingSoon: false,
     },
     {
       title: 'Task Master',
@@ -69,7 +62,7 @@ const Technical = () => {
     },
     {
       title: 'Sand Rover',
-      image: 'https://i0.wp.com/roboticsindia.live/wp-content/uploads/2021/03/SAVE_20210324_194657.jpg?resize=800%2C450&ssl=1',
+      image: 'https://i.ytimg.com/vi/x6S3Y9PMUVs/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBzoDEIURLrMwQMfJluzdmlzrH6tQ',
       description: 'Robo-war / combat robot event.',
       formLink: 'https://forms.gle/DKC6NKhxDzcQpAx8A',
       comingSoon: false,
@@ -78,7 +71,7 @@ const Technical = () => {
     },
     {
       title: 'Line Follower',
-      image: 'https://i.ytimg.com/vi/x6S3Y9PMUVs/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBzoDEIURLrMwQMfJluzdmlzrH6tQ',
+      image: 'https://quartzcomponents.com/cdn/shop/articles/line-follower-robot-using-arduino_750x.jpg?v=1671189499',
       description: 'Rover design challenge (individual).',
       formLink: 'https://forms.gle/eNK7NP4pNHtuYqGq5',
       comingSoon: false,
@@ -98,13 +91,6 @@ const Technical = () => {
       description: 'VLSI design challenge using Cadence tools.',
       formLink: 'https://forms.gle/NyvLjSeJQydnSquz5',
       comingSoon: false,
-    },
-    {
-      title: 'Poster Jam',
-      image: 'https://images.unsplash.com/photo-1591115765373-5207764f72e7?q=80&w=2070&auto=format&fit=crop',
-      description: 'Create and present posters on innovative technical ideas within a limited time.',
-      formLink: 'https://forms.gle/keTWrqUsrHZdttbG7',
-      comingSoon: true,
     },
   ];
 

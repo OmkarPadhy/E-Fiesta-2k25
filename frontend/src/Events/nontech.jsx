@@ -60,8 +60,8 @@ const NonTech = () => {
       title: 'Clay Craze',
       image: 'https://m.media-amazon.com/images/I/717B0FsK5VL._UF350,350_QL80_.jpg',
       description: 'Clay modeling and sculpture event.',
-      formLink: '#',
-      comingSoon: true
+      formLink: 'https://forms.gle/d3pXXshfwny1dijC8',
+      comingSoon: false
     },
     {
       title: 'Crafty Cards',

@@ -68,9 +68,9 @@ const Sports = () => {
      { title: 'Power Throw', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYe2dPiALo8j0axXj9UOqwIH8r8EQK-WsYWA&s', description: 'Throw ball contest.', formLink: 'https://forms.gle/tRdRZDu25MZhJCVt7', comingSoon: false },
     { title: 'Striker Shots', image: 'https://images.unsplash.com/photo-1652558973183-a3f046921163?q=80&w=2081&auto=format&fit=crop', description: 'Carrom board competition.', formLink: 'https://forms.gle/54RgfxgosCAW1fVc8', comingSoon: false },
     { title: 'Rope Rumble', image: 'https://images.unsplash.com/photo-1692366850335-9415ee4724c8?q=80&w=2166&auto=format&fit=crop', description: 'Tug of war competition.', formLink: 'https://forms.gle/HAz6LAmUVeHXhHjk8', comingSoon: false},
-    { title: 'Zesty Race', image: 'https://m.media-amazon.com/images/I/71oJ4Nl22OL._UF350,350_QL80_.jpg', description: 'Fun relay or sprint race (girls only).', formLink: 'https://forms.gle/RiNgqBFEWaMgs6fd9', comingSoon: true },
-    { title: 'Chair Chase', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Musical_chairs_Lawn_Jam_Our_Community_Place_Harrisonburg_VA_June_2008.jpg/1920px-Musical_chairs_Lawn_Jam_Our_Community_Place_Harrisonburg_VA_June_2008.jpg', description: 'Musical chair game (girls only).', formLink: 'https://forms.gle/EEBkAf8gF1W8fWHg8', comingSoon: true },
-    { title: "Smash n' Dash", image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXRnKM7rn9bIKH2g_28DbaISKrGomLfBTpPQ&s', description: 'Badminton matches.', formLink: '#', comingSoon: true }
+    { title: 'Zesty Race', image: 'https://m.media-amazon.com/images/I/71oJ4Nl22OL._UF350,350_QL80_.jpg', description: 'Fun relay or sprint race (girls only).', formLink: 'https://forms.gle/ED8z1YeaUSVeLtPk7', comingSoon: false },
+    { title: 'Chair Chase', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Musical_chairs_Lawn_Jam_Our_Community_Place_Harrisonburg_VA_June_2008.jpg/1920px-Musical_chairs_Lawn_Jam_Our_Community_Place_Harrisonburg_VA_June_2008.jpg', description: 'Musical chair game (girls only).', formLink: 'https://forms.gle/ED8z1YeaUSVeLtPk7', comingSoon: false},
+    { title: "Smash n' Dash", image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXRnKM7rn9bIKH2g_28DbaISKrGomLfBTpPQ&s', description: 'Badminton matches.', formLink: 'https://forms.gle/hsYxTVY1qptfVmYj6', comingSoon: false }
   ];
 
  const RenderCard = ({ event }) => {
