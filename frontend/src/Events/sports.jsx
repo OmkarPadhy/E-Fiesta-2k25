@@ -123,7 +123,7 @@ const Sports = () => {
         {/* Urgency line for hot events */}
         {isHot && (
           <div className="register-hint">
-            Limited slots — read rules in the form and register quickly!
+           This Event is Open for All Branches! Click on Register button to know more  
           </div>
         )}
 
