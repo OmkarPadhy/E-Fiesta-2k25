@@ -51,7 +51,7 @@ const Sports = () => {
   // Events: title, image, description, formLink, comingSoon
   const boysEvents = [
     { title: 'Smash Cricket (ECE Only)', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0qaypv6A8cp8R-VhO3PuA-PGa6ZxHlA5qRQ&s', description: 'Box cricket / turf cricket event.', formLink: 'https://forms.gle/dhQoeZjL9KgDPrz69', comingSoon: false },
-    { title: 'Gully Cricket', image: 'https://i.postimg.cc/gkpqnnt5/Gully-cricket.png', description: 'Street cricket tournament.', formLink: 'https://forms.gle/F77LMU4Snk5D44VF6', comingSoon: false },
+    { title: 'Gully Cricket', image: 'https://i.postimg.cc/gkpqnnt5/Gully-cricket.png', description: 'Street cricket tournament.', formLink: 'https://forms.gle/F77LMU4Snk5D44VF6', comingSoon: false, hot: true, cta: 'Register Now', prize: '₹3,000 + memento' },
     { title: 'Checkmate Clash', image: 'https://images.unsplash.com/photo-1529699211952-734e80c4d42b?q=80&w=2071&auto=format&fit=crop', description: 'Chess tournament.', formLink: 'https://forms.gle/CZQdsSx4RzujqApN8', comingSoon: false },
     { title: 'Striker Shots', image: 'https://images.unsplash.com/photo-1652558973183-a3f046921163?q=80&w=2081&auto=format&fit=crop', description: 'Carrom board competition.', formLink: 'https://forms.gle/EKhA9EqKZyFZFSkP6', comingSoon: false },
     { title: 'Rope Rumble', image: 'https://images.unsplash.com/photo-1692366850335-9415ee4724c8?q=80&w=2166&auto=format&fit=crop', description: 'Tug of war competition.', formLink: 'https://forms.gle/HAz6LAmUVeHXhHjk8', comingSoon: false},
@@ -73,36 +73,97 @@ const Sports = () => {
     { title: "Smash n' Dash", image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXRnKM7rn9bIKH2g_28DbaISKrGomLfBTpPQ&s', description: 'Badminton matches.', formLink: '#', comingSoon: true }
   ];
 
-  const RenderCard = ({ event }) => {
-    const isSoon = !!event.comingSoon;
-    return (
-      <div className={`event-card ${isSoon ? 'is-coming-soon' : ''}`}>
-        <div className="event-visual">
-          <img src={event.image || 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop'} alt={event.title} onError={handleImageError} />
+ const RenderCard = ({ event }) => {
+  const isSoon = !!event.comingSoon;
+  const isHot = !!event.hot;
+
+  return (
+    <div
+      className={`event-card ${isSoon ? "is-coming-soon" : ""} ${
+        isHot ? "hot-event" : ""
+      }`}
+    >
+      {/* 🔥 Hot Event Badge */}
+      {isHot && (
+        <div className="event-badge" aria-hidden="true">
+          🔥 Hot Event
         </div>
+      )}
 
-        <div className="event-meta">
-          <h4 className="event-title">{event.title}</h4>
-          <p className="event-desc">{event.description}</p>
+      {/* IMAGE area */}
+      <div className="event-visual">
+        <img
+          src={
+            event.image ||
+            "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
+          }
+          alt={event.title}
+          onError={handleImageError}
+        />
+      </div>
 
-          {!isSoon ? (
-            <a className="register-btn" href={normalizeUrl(event.formLink)} target="_blank" rel="noopener noreferrer" role="button" aria-label={`Register for ${event.title}`}>
-              Register
-            </a>
-          ) : (
-            <button className="register-btn disabled" aria-disabled="true" tabIndex={-1}>Register</button>
-          )}
-        </div>
+      {/* BELOW IMAGE */}
+      <div className="event-meta">
+        {/* Title */}
+        <h4 className="event-title">{event.title}</h4>
 
-        {isSoon && (
-          <div className="coming-soon-overlay">
-            <span>Coming Soon</span>
+        {/* For HOT events show prize heading */}
+        {isHot && event.prize && (
+          <h3 className="prize-heading">
+            Winning Prize{" "}
+            <span className="prize-amount">{event.prize}</span>
+          </h3>
+        )}
+
+        {/* Optional prize tail (like goodies/mementos) */}
+        {isHot && event.prizeTail && (
+          <div className="prize-tail">{event.prizeTail}</div>
+        )}
+
+        {/* Urgency line for hot events */}
+        {isHot && (
+          <div className="register-hint">
+            Limited slots — read rules in the form and register quickly!
           </div>
         )}
-      </div>
-    );
-  };
 
+        {/* Description (hidden for hot if you want) */}
+        {!isHot && <p className="event-desc">{event.description}</p>}
+
+        {/* Register Button */}
+        <div className="actions-row">
+          {!isSoon ? (
+            <a
+              className="register-btn"
+              href={normalizeUrl(event.formLink)}
+              target="_blank"
+              rel="noopener noreferrer"
+              role="button"
+              aria-label={`Register for ${event.title}`}
+            >
+              {event.cta || "Register Now"}
+            </a>
+          ) : (
+            <button
+              className="register-btn disabled"
+              aria-disabled="true"
+              tabIndex={-1}
+            >
+              Register
+            </button>
+          )}
+        </div>
+      </div>
+
+      {/* COMING SOON Overlay */}
+      {isSoon && (
+        <div className="coming-soon-overlay">
+          <span>Coming Soon</span>
+        </div>
+      )}
+    </div>
+  );
+};
   const MobileView = () => (
     <>
       <div ref={boysEventsRef} className="events-section">

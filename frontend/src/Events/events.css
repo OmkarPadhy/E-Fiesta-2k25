@@ -154,9 +154,8 @@
    Coming Soon
 ----------------------------- */
 .event-card.coming-soon {
-  filter: blur(3px) brightness(0.75);
+  filter: none;
   pointer-events: none;
-  user-select: none;
 }
 
 .event-card.coming-soon .event-title,
@@ -229,6 +228,292 @@
   font-weight: 700;
   text-transform: uppercase;
 }
+/* ----------------------------
+   EVENT CARD: combined styles
+   (coming-soon + hot / prize / CTA)
+   Paste this after your existing coming-soon rules
+   ---------------------------- */
+
+/* Base card */
+.event-card {
+  position: relative;
+  background: rgba(255,255,255,0.02);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Slight lift on hover */
+.event-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 60px rgba(0,0,0,0.55);
+}
+
+/* Visual area (image wrapper) */
+.event-visual {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  background: rgba(0,0,0,0.12);
+}
+
+.event-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease, filter 0.35s ease;
+}
+
+/* On hover, slightly zoom image */
+.event-card:hover .event-visual img {
+  transform: scale(1.04);
+  filter: brightness(0.86);
+}
+
+/* Meta area */
+.event-meta {
+  padding: 12px 14px 18px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Title */
+.event-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #00f0e0;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+/* description (small) */
+.event-desc {
+  margin: 0;
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.85);
+  opacity: 0.95;
+}
+
+/* actions row: CTA + prize */
+.actions-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+/* Register CTA (base) */
+.register-btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  background: linear-gradient(90deg, #19e6e6, #b94cf0);
+  color: #051226;
+  box-shadow: 0 6px 18px rgba(11,253,253,0.12);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  border: none;
+}
+
+/* CTA hover */
+.register-btn:hover:not(.disabled) {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 14px 40px rgba(11,253,253,0.18);
+}
+
+/* disabled CTA */
+.register-btn.disabled {
+  background: rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.55);
+  cursor: default;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+/* Coming soon card visual: slightly blurred + non-interactive */
+.event-card.is-coming-soon,
+.event-card.coming-soon {
+  filter: blur(1.6px);
+  brightness(0.78);
+  /* opacity: 0.95; */
+  pointer-events: none;
+  user-select: none;
+}
+
+/* But ensure the overlay label is visible above blur */
+.coming-soon-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 300; /* must sit above blur */
+  pointer-events: none; /* allow pointer for overlay text if needed */
+}
+
+.coming-soon-overlay span {
+  /* display: inline-block; */
+  background: rgba(10,10,10,0.88);
+  color: #ffd6e0;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: 0.8px;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.6);
+}
+
+/* -------------------------------------------------------
+   HOT EVENT + PRIZE BADGE STYLES
+   ------------------------------------------------------- */
+
+/* hot event visual effect (breathing + glow) */
+.event-card.hot-event {
+  position: relative;
+  transform-origin: center;
+  animation: hotFloat 4.5s ease-in-out infinite;
+  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 10px 40px rgba(255,60,80,0.04), 0 0 20px rgba(255,80,120,0.02) inset;
+}
+
+/* subtle glowing ring */
+.event-card.hot-event::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 14px;
+  pointer-events: none;
+  background: radial-gradient(closest-side, rgba(255,100,80,0.06), rgba(255,100,80,0.0));
+  z-index: 5;
+}
+
+/* float anim */
+@keyframes hotFloat {
+  0% { transform: translateY(0) scale(1); filter: drop-shadow(0 6px 18px rgba(0,0,0,0.25)); }
+  50% { transform: translateY(-6px) scale(1.01); filter: drop-shadow(0 12px 30px rgba(0,0,0,0.28)); }
+  100% { transform: translateY(0) scale(1); filter: drop-shadow(0 6px 18px rgba(0,0,0,0.25)); }
+}
+
+/* top-left badge for hot items */
+.event-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 30;
+  font-weight: 800;
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border-radius: 22px;
+  background: linear-gradient(90deg, #ff6a00, #ff2d95);
+  color: white;
+  box-shadow: 0 6px 18px rgba(255,60,100,0.18);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transform: translateZ(0);
+  animation: badgePulse 2.6s ease-in-out infinite;
+}
+
+/* badge pulse */
+@keyframes badgePulse {
+  0% { box-shadow: 0 6px 18px rgba(255,60,100,0.18); transform: translateY(0); }
+  50% { box-shadow: 0 10px 30px rgba(255,60,100,0.28); transform: translateY(-3px); }
+  100% { box-shadow: 0 6px 18px rgba(255,60,100,0.18); transform: translateY(0); }
+}
+
+/* PRIZE area */
+.event-prize {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 6px 12px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.34), rgba(0,0,0,0.55));
+  color: #ffd6e0;
+  min-width: 120px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* prize numeric highlight */
+.prize-amount {
+  font-size: 1.35rem;
+  color: #00f0e0;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+  text-shadow: 0 6px 18px rgba(0,240,224,0.12);
+}
+
+/* tail text */
+.prize-tail {
+  font-size: 0.92rem;
+  color: #ffd6e0;
+  font-weight: 700;
+  opacity: 0.95;
+}
+
+/* small descriptive hint below prize/CTA */
+.register-hint {
+  margin-top: 8px;
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.9);
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+}
+
+/* subtle transitions */
+.event-card,
+.event-visual img,
+.event-badge,
+.register-btn,
+.event-prize {
+  transition: all 220ms ease;
+}
+
+/* Responsiveness tweaks */
+@media (max-width: 1024px) {
+  .event-visual { height: 180px; }
+  .event-card { min-height: 260px; }
+  .prize-amount { font-size: 1.15rem; }
+}
+
+@media (max-width: 768px) {
+  .event-visual { height: 160px; }
+  .event-card { min-height: 220px; }
+  .prize-amount { font-size: 1.02rem; }
+  .event-badge { font-size: 0.78rem; padding: 5px 8px; }
+  .register-btn { padding: 8px 18px; font-weight: 800; }
+}
+
+/* Ensure Coming Soon overlay remains clickable/visible */
+.coming-soon-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+}
+
+/* If you want a subtle background glow for the entire events grid area */
+.events-wrapper .event-card.hot-event {
+  will-change: transform;
+}
+
 
 /* ----------------------------
    Mobile View
@@ -269,4 +554,236 @@
     font-size: 1rem;
     padding: 6px 10px;
   }
+}
+/* ----------------------------
+  Poster-fill overlay & coming-soon fixes
+----------------------------- */
+
+/* enlarge card visual so image fills the title gap */
+.event-card {
+  min-height: 360px; /* slightly taller so poster looks clear */
+}
+
+/* visual (image) area */
+.event-visual {
+  width: 100%;
+  height: 260px; /* larger poster area */
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background: rgba(0,0,0,0.08);
+}
+
+/* image covers area */
+.event-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease, filter 0.35s ease;
+}
+
+/* subtle zoom on hover */
+.event-card:hover .event-visual img {
+  transform: scale(1.04);
+  filter: brightness(0.78);
+}
+
+/* overlay placed at bottom of the image (fills gap) */
+.visual-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(6px);
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.45) 60%);
+  z-index: 6;
+}
+
+/* Title shown inside overlay (large, centered) */
+.overlay-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: #00f0e0;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  text-align: center;
+}
+
+/* overlay prize box (centered) */
+.overlay-prize {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-top: 2px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.34), rgba(0,0,0,0.48));
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+  z-index: 8;
+  backdrop-filter: blur(6px);
+}
+
+/* Winning Prize label */
+.prize-label {
+  font-size: 0.78rem;
+  color: #ffd6e0;
+  font-weight: 800;
+  opacity: 0.95;
+  letter-spacing: 0.6px;
+}
+
+/* prize amount larger and eye-catching */
+.prize-amount {
+  font-size: 1.55rem; /* bigger so it stands out */
+  color: #00f0e0;
+  font-weight: 900;
+  text-shadow: 0 8px 24px rgba(0,240,224,0.08);
+  animation: prizePulse 2.6s ease-in-out infinite;
+}
+
+/* prize tail (small) */
+.prize-tail {
+  font-size: 0.92rem;
+  color: #ffd6e0;
+  font-weight: 800;
+}
+
+/* small pulse for prize (subtle) */
+@keyframes prizePulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+/* ensure coming-soon label sits above the blur area and is crisp */
+.coming-soon-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 120; /* above blur */
+  pointer-events: none;
+}
+.coming-soon-overlay span {
+  display: inline-block;
+  background: rgba(10,10,10,0.85);
+  color: #ffd6e0;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.6);
+}
+
+/* reduce blur of is-coming-soon slightly but keep it interactive disabled */
+.event-card.is-coming-soon,
+.event-card.coming-soon {
+  filter: blur(2.0px) brightness(0.78);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* move meta area lower and style description + CTA */
+.event-meta {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* desc smaller and subtle (keeps layout consistent) */
+.event-desc {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.92);
+  text-align: center;
+  max-width: 100%;
+}
+
+/* CTA stays below image as before */
+.actions-row { margin-top: 6px; }
+
+/* responsive adjustments */
+@media (max-width: 1024px) {
+  .event-visual { height: 220px; }
+  .event-card { min-height: 320px; }
+  .prize-amount { font-size: 1.25rem; }
+}
+
+@media (max-width: 768px) {
+  .event-visual { height: 160px; }
+  .event-card { min-height: 240px; }
+  .prize-amount { font-size: 1.02rem; }
+}
+/* Fix coming soon blur (only blur content, not overlay) */
+.event-card.coming-soon .event-visual,
+.event-card.coming-soon .event-meta,
+.event-card.coming-soon .register-btn {
+  filter: blur(2px) brightness(0.75);
+  user-select: none;
+}
+
+.event-card.coming-soon .coming-soon-overlay {
+  position: absolute ;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  z-index: 1200;
+  filter: none;
+}
+
+/* Prize heading size tweak */
+.prize-heading {
+  margin: 8px 0 4px;
+  color: #00f0e0;
+  font-size: 1.1rem;   /* smaller than before */
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.prize-heading .prize-amount {
+  margin-left: 6px;
+  font-size: 1.25rem;  /* reduced size */
+  font-weight: 900;
+  color: #00f0e0;
+}
+
+/* New separate blur effect */
+.blurred-card {
+  filter: blur(2px) brightness(0.78);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Keep overlay crisp & above blur */
+.coming-soon-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  pointer-events: none;
+}
+.coming-soon-overlay span {
+  background: rgba(10, 10, 10, 0.85);
+  color: #ffd6e0;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: 0.8px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
 }
