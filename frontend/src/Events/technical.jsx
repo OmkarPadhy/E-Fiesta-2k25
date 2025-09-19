@@ -55,7 +55,7 @@ const Technical = () => {
       title: 'Gizmo Expo',
       image: 'https://images.unsplash.com/photo-1527356900876-cae61d8d8462?q=80&w=2076&auto=format&fit=crop',
       description: 'Showcase innovative gadgets, prototypes, and mini-projects.',
-      formLink: 'https://forms.gle/YOUR_FORM_LINK_4',
+      formLink: '',
       comingSoon: true,
     },
     {
@@ -64,7 +64,7 @@ const Technical = () => {
       description: 'Robo-soccer where bots compete to score goals.',
       formLink: 'https://forms.gle/SmS6QtMfSGV9T9oh8',
       comingSoon: false,
-      hot: true, cta: 'Register Now', prize: '₹5,000 + memento',
+      hot: true, cta: 'Register Now', prize: 'Cashprizes + memento',
       date: '22nd September, 2025'
     },
     {
@@ -73,21 +73,30 @@ const Technical = () => {
       description: 'Robo-war / combat robot event.',
       formLink: 'https://forms.gle/DKC6NKhxDzcQpAx8A',
       comingSoon: false,
-      hot: true, cta: 'Register Now', prize: '₹5,000 + memento',
+      hot: true, cta: 'Register Now', prize: 'Cashprizes + memento',
       date: '23nd September, 2025'
     },
     {
       title: 'Line Follower',
       image: 'https://i.ytimg.com/vi/x6S3Y9PMUVs/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBzoDEIURLrMwQMfJluzdmlzrH6tQ',
       description: 'Rover design challenge (individual).',
-      formLink: '#',
-      comingSoon: true,
+      formLink: 'https://forms.gle/eNK7NP4pNHtuYqGq5',
+      comingSoon: false,
+      hot: true, cta: 'Register Now', prize: 'Cashprizes + memento',
+      date: '12th October, 2025'
     },
     {
       title: 'PowerPlay Proteus',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQedQHm0tG2AkKpIUrLJCrBv5kYvpdnZZ-btA&s',
       description: 'Simulation / design event using Proteus software.',
       formLink: 'https://forms.gle/AKXhUzbztduv6jp97',
+      comingSoon: false,
+    },
+    {
+      title: 'VLSI Cadence Tool Competition',
+      image: 'https://mms.businesswire.com/media/20230419005232/en/1767574/4/J15686_Virtuoso_SM_1080x1080_(1).jpg',
+      description: 'VLSI design challenge using Cadence tools.',
+      formLink: 'https://forms.gle/NyvLjSeJQydnSquz5',
       comingSoon: false,
     },
     {

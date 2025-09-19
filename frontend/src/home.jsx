@@ -217,7 +217,7 @@ const eventDate = Date.UTC(2025, 9, 11, 2, 30, 0);
 </h1>
 
                     <p className="welcome-text">
-                        💜 जिना ECE का नाम है 🩷
+                        💜 जीना ECE का नाम है 🩷
                     </p>
                     <div className="countdown">
                         <div><span id="days">00</span><span>Days</span></div>
