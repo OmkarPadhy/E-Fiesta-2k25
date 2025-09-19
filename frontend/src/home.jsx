@@ -246,7 +246,7 @@ const eventDate = Date.UTC(2025, 9, 11, 2, 30, 0);
                             <p>Dive into the core of tech. From circuit design to coding challenges.</p>
                         </div>
                         <div className="events-card" onClick={() => navigate('/events/nontech')}>
-                            <img src="https://images.unsplash.com/photo-1557461762-e08315322e3d?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Non-tech events" />
+                            <img src="https://i.postimg.cc/KYFqJyGc/pubg.jpg" alt="Non-tech events" />
                             <h3>Non-Technical</h3>
                             <p>Step beyond the screen. Unleash your creativity and capture moments.</p>
                         </div>
