@@ -27,7 +27,7 @@ const Technical = () => {
       title: 'Circuit Craze',
       image: 'https://images.unsplash.com/photo-1592659762303-90081d34b277?q=80&w=1973&auto=format&fit=crop',
       description: 'Design, debug, or solve electronic circuits and challenges.',
-      formLink: 'https://forms.gle/iomDEEsvuWrHgok67',
+      formLink: 'https://forms.gle/jorMmLbwmkvo8aXq8',
       comingSoon: false,
     },
     {
