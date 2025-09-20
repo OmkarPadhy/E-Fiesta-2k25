@@ -16,7 +16,7 @@ const NonTech = () => {
   const events = [
     {
       title: 'Xplore Quest',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQurEiFw4C5V40uAyA-VBQJwH0id1KRzVW3eg&s',
+      image: 'https://i.postimg.cc/8Cgw0m3L/IMG-20250920-WA0020.jpg',
       description: 'Treasure hunt with logical and fun tasks.',
       formLink: 'https://forms.gle/v58YY3LxjfWuUDRf8',
       comingSoon: false
@@ -44,28 +44,28 @@ const NonTech = () => {
     },
     {
       title: 'Henna Hues',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV4V3jjaAC4njsW8m5rvLVE9vgg6HA4jVHCA&s',
+      image: 'https://i.postimg.cc/QtXmXxjt/IMG-20250920-WA0011.jpg',
       description: 'Creative mehendi/henna art contest.',
       formLink: 'https://forms.gle/CVJnBh8iEJm2HHPy8',
       comingSoon: false
     },
     {
       title: 'Color Splash',
-      image: 'https://t4.ftcdn.net/jpg/06/00/22/85/360_F_600228506_xWL2u0Qr8zq0MJFMLyfxNbB02ztObnD0.jpg',
+      image: 'https://i.postimg.cc/25YFw8bw/IMG-20250920-WA0031.jpg',
       description: 'Rangoli or creative coloring/design contest.',
       formLink: 'https://forms.gle/DqEjEBDffu2BQS8Y6',
       comingSoon: false
     },
     {
       title: 'Clay Craze',
-      image: 'https://m.media-amazon.com/images/I/717B0FsK5VL._UF350,350_QL80_.jpg',
+      image: 'https://i.postimg.cc/m2qmQsyX/IMG-20250920-WA0017.jpg',
       description: 'Clay modeling and sculpture event.',
       formLink: 'https://forms.gle/d3pXXshfwny1dijC8',
       comingSoon: false
     },
     {
       title: 'Crafty Cards',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrjJLydjV1UWMU-fXwHHkgiZuDTkKJ-ET1Gg&s',
+      image: 'https://i.postimg.cc/76s3w3Bs/IMG-20250920-WA0021.jpg',
       description: 'Handmade greeting/creative card competition.',
       formLink: 'https://forms.gle/HETu9oZ4TtTZiF7n6',
       comingSoon: false
@@ -79,7 +79,7 @@ const NonTech = () => {
     },
     {
       title: 'Art Attack',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgtkEbvRFv8BRi2nN2Iy0t1_iU2YwNH-aWyg&s',
+      image: 'https://i.postimg.cc/CMcPxDBV/IMG-20250920-WA0024.jpg',
       description: 'Drawing/painting competition.',
       formLink: 'https://forms.gle/sDEE8vmrq1GZ9pj99',
       comingSoon: false

@@ -46,7 +46,7 @@ const Technical = () => {
     },
     {
       title: 'Gizmo Expo',
-      image: 'https://images.unsplash.com/photo-1527356900876-cae61d8d8462?q=80&w=2076&auto=format&fit=crop',
+      image: 'https://i.postimg.cc/pXy0hTz5/IMG-20250920-WA0025.jpg',
       description: 'Showcase innovative gadgets, prototypes, and mini-projects.',
       formLink: 'https://forms.gle/tZA2QE3W5FS7qdEC7',
       comingSoon: false,
@@ -80,7 +80,7 @@ const Technical = () => {
     },
     {
       title: 'PowerPlay Proteus',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQedQHm0tG2AkKpIUrLJCrBv5kYvpdnZZ-btA&s',
+      image: 'https://i.postimg.cc/Kvd515mC/IMG-20250920-WA0015.jpg',
       description: 'Simulation / design event using Proteus software.',
       formLink: 'https://forms.gle/AKXhUzbztduv6jp97',
       comingSoon: false,
@@ -90,6 +90,13 @@ const Technical = () => {
       image: 'https://mms.businesswire.com/media/20230419005232/en/1767574/4/J15686_Virtuoso_SM_1080x1080_(1).jpg',
       description: 'VLSI design challenge using Cadence tools.',
       formLink: 'https://forms.gle/NyvLjSeJQydnSquz5',
+      comingSoon: false,
+    },
+    {
+      title: 'Xilinx Vivado Competition',
+      image: 'https://iconape.com/wp-content/png_logo_vector/xilinx.png',
+      description: 'FPGA design challenge using Xilinx Vivado.',
+      formLink: 'https://forms.gle/rGUJP6ii85KdL8g47',
       comingSoon: false,
     },
   ];
