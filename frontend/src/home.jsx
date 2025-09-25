@@ -280,11 +280,11 @@ const eventDate = Date.UTC(2025, 9, 11, 2, 30, 0);
                             <h3>T-Shirt</h3>
                             <p>Get your hands on our limited edition merchandise. Stylish and comfortable t-shirts with unique Future Fest designs.</p>
                         </div>
-                        {/* <div className="events-card" onClick={() => navigate('/Developer')}>
+                        <div className="events-card" onClick={() => navigate('/Developer')}>
                             <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" alt="Team" />
                             <h3>Our Team</h3>
                             <p>Meet the passionate individuals behind Future Fest. A diverse team of creators, innovators, and dreamers.</p>
-                        </div> */}
+                        </div>
                     </div>
                 </div>
             </div>
