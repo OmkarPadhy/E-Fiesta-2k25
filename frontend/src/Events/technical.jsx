@@ -56,18 +56,18 @@ const Technical = () => {
       image: 'https://ai.thestempedia.com/wp-content/uploads/2023/05/Soccer-Robot-Cover.jpg',
       description: 'Robo-soccer where bots compete to score goals.',
       formLink: 'https://forms.gle/SmS6QtMfSGV9T9oh8',
-      comingSoon: false,
-      hot: true, cta: 'Register Now', prize: 'Cashprizes + memento',
-      date: '22nd September, 2025'
+      comingSoon: true,
+      // hot: true, cta: 'Register Now', prize: 'Cashprizes + memento',
+      // date: '22nd September, 2025'
     },
     {
       title: 'Sand Rover',
       image: 'https://i.ytimg.com/vi/x6S3Y9PMUVs/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBzoDEIURLrMwQMfJluzdmlzrH6tQ',
       description: 'Robo-war / combat robot event.',
       formLink: 'https://forms.gle/DKC6NKhxDzcQpAx8A',
-      comingSoon: false,
-      hot: true, cta: 'Register Now', prize: 'Cashprizes + memento',
-      date: '23nd September, 2025'
+      comingSoon: true,
+      // hot: true, cta: 'Register Now', prize: 'Cashprizes + memento',
+      // date: '23nd September, 2025'
     },
     {
       title: 'Line Follower',
@@ -76,7 +76,7 @@ const Technical = () => {
       formLink: 'https://forms.gle/eNK7NP4pNHtuYqGq5',
       comingSoon: false,
       hot: true, cta: 'Register Now', prize: 'Cashprizes + memento',
-      date: '12th October, 2025'
+      // date: '12th October, 2025'
     },
     {
       title: 'PowerPlay Proteus',
@@ -125,7 +125,7 @@ const Technical = () => {
       {/* coming soon overlay */}
       {isSoon && (
         <div className="coming-soon-overlay" aria-hidden="true">
-          <span>Coming Soon</span>
+          <span>Event Closed</span>
         </div>
       )}
 

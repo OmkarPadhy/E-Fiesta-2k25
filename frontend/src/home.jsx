@@ -48,7 +48,7 @@ const Main = () => {
     useEffect(() => {
         // Countdown timer logic
         const countdownElement = document.querySelector('.countdown');
-const eventDate = Date.UTC(2025, 9, 11, 2, 30, 0);
+const eventDate = Date.UTC(2025, 9, 30, 2, 30, 0); // 9 = October (months are 0-based), 2:30 UTC = 8:00 IST
 
 
 
