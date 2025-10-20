@@ -4,14 +4,12 @@ import './events.css';
 
 const Sports = () => {
   const [isMobile, setIsMobile] = useState(false);
-
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth <= 768);
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
-
   useEffect(() => {
     console.log('[Sports] rendering. isMobile =', isMobile ? 'true (MobileView)' : 'false (DesktopView)');
   }, [isMobile]);
@@ -48,201 +46,211 @@ const Sports = () => {
     });
   };
 
-  // Events: title, image, description, formLink, comingSoon
+  // Events: title, image, description, formLink, comingSoon, date, time, venue, closed, hot, prize, prizeTail, cta
   const boysEvents = [
-    { title: 'Smash Cricket (ECE Only)', image: 'https://i.postimg.cc/63Y0TJQh/IMG-20250920-WA0013.jpg', description: 'Box cricket / turf cricket event.', formLink: 'https://forms.gle/dhQoeZjL9KgDPrz69', comingSoon: false , closed: true },
-    { title: 'Gully Cricket', image: 'https://i.postimg.cc/gkpqnnt5/Gully-cricket.png', description: 'Street cricket tournament.', formLink: 'https://forms.gle/F77LMU4Snk5D44VF6', comingSoon: false, hot: true, cta: 'Register Now', prize: 'Cashprizes + memento' , ate: '22nd Sept, 2025'},
-    { title: 'Checkmate Clash', image: 'https://i.postimg.cc/2Sh7hB6y/Whats-App-Image-2025-09-20-at-14-07-44-0c6a75a1.jpg', description: 'Chess tournament.', formLink: 'https://forms.gle/CZQdsSx4RzujqApN8', comingSoon: false },
-    { title: 'Striker Shots', image: 'https://images.unsplash.com/photo-1652558973183-a3f046921163?q=80&w=2081&auto=format&fit=crop', description: 'Carrom board competition.', formLink: 'https://forms.gle/EKhA9EqKZyFZFSkP6', comingSoon: false },
-    { title: 'Rope Rumble', image: 'https://i.postimg.cc/rpGgXtX3/IMG-20250920-WA0019.jpg', description: 'Tug of war competition.', formLink: 'https://forms.gle/HAz6LAmUVeHXhHjk8', comingSoon: false},
-    { title: 'Satolia (7 Stones)', image: 'https://upload.wikimedia.org/wikipedia/commons/b/be/Dabba_Kali2.jpg', description: 'Seven stones (traditional Indian outdoor game).', formLink: 'https://forms.gle/BFDkr2QN4KfeFSBi8', comingSoon: false },
-    { title: "Smash n' Dash", image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXRnKM7rn9bIKH2g_28DbaISKrGomLfBTpPQ&s', description: 'Badminton matches.', formLink: 'https://forms.gle/Dfh5EXMERiPg9eDQA', comingSoon: false },
-    { title: 'Volley Vibes', image: 'https://i.postimg.cc/fyqBqnnb/IMG-20250920-WA0026.jpg', description: 'Volleyball competition.', formLink: 'https://forms.gle/QEQNtDUsq15X98Cj8', comingSoon: false },
-    { title: 'Khel Kabaddi (ECE Only)', image: 'https://sc0.blr1.cdn.digitaloceanspaces.com/article/204120-pjgcfidsfz-1729917365.jpg', description: 'Traditional kabaddi match.', formLink: 'https://forms.gle/5AyAjefWiMqqj3yp9', comingSoon: false , closed: true },
-    { title: 'Street Champs (Gully Football)', image: 'https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=2067&auto=format&fit=crop', description: 'Gully football event.', formLink: '#', comingSoon: true }
+    { title: 'Smash Cricket (ECE Only)', image: 'https://i.postimg.cc/63Y0TJQh/IMG-20250920-WA0013.jpg', description: 'Box cricket / turf cricket event.', formLink: 'https://forms.gle/dhQoeZjL9KgDPrz69', comingSoon: false, closed: true, date: '#', time: '#', venue: '#' },
+    { title: 'Gully Cricket', image: 'https://i.postimg.cc/gkpqnnt5/Gully-cricket.png', description: 'Street cricket tournament.', formLink: 'https://forms.gle/F77LMU4Snk5D44VF6', comingSoon: false, closed: true, date: '#', time: '#', venue: '#' },
+    { title: 'Checkmate Clash', image: 'https://i.postimg.cc/2Sh7hB6y/Whats-App-Image-2025-09-20-at-14-07-44-0c6a75a1.jpg', description: 'Chess tournament.', formLink: 'https://forms.gle/CZQdsSx4RzujqApN8', comingSoon: false, date: '#', time: '#', venue: '#' },
+    { title: 'Striker Shots', image: 'https://images.unsplash.com/photo-1652558973183-a3f046921163?q=80&w=2081&auto=format&fit=crop', description: 'Carrom board competition.', formLink: 'https://forms.gle/EKhA9EqKZyFZFSkP6', comingSoon: false, date: '#', time: '#', venue: '#' },
+    { title: 'Rope Rumble', image: 'https://i.postimg.cc/rpGgXtX3/IMG-20250920-WA0019.jpg', description: 'Tug of war competition.', formLink: 'https://forms.gle/HAz6LAmUVeHXhHjk8', comingSoon: false, date: '#', time: '#', venue: '#' },
+    { title: 'Satolia (7 Stones)', image: 'https://upload.wikimedia.org/wikipedia/commons/b/be/Dabba_Kali2.jpg', description: 'Seven stones (traditional Indian outdoor game).', formLink: 'https://forms.gle/BFDkr2QN4KfeFSBi8', comingSoon: false, date: '#', time: '#', venue: '#' },
+    { title: "Smash n' Dash", image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXRnKM7rn9bIKH2g_28DbaISKrGomLfBTpPQ&s', description: 'Badminton matches.', formLink: 'https://forms.gle/Dfh5EXMERiPg9eDQA', comingSoon: false, date: '#', time: '#', venue: '#' },
+    { title: 'Volley Vibes', image: 'https://i.postimg.cc/fyqBqnnb/IMG-20250920-WA0026.jpg', description: 'Volleyball competition.', formLink: 'https://forms.gle/QEQNtDUsq15X98Cj8', comingSoon: false, date: '#', time: '#', venue: '#' },
+    { title: 'Khel Kabaddi (ECE Only)', image: 'https://sc0.blr1.cdn.digitaloceanspaces.com/article/204120-pjgcfidsfz-1729917365.jpg', description: 'Traditional kabaddi match.', formLink: 'https://forms.gle/5AyAjefWiMqqj3yp9', comingSoon: false, closed: true, date: '#', time: '#', venue: '#' },
   ];
 
   const girlsEvents = [
-    { title: 'Gully Cricket', image: 'https://images.unsplash.com/photo-1709233955550-1a316eab4974?q=80&w=1974&auto=format&fit=crop', description: 'Street cricket event.', formLink: 'https://forms.gle/FYZnVtbfFMXnVfoG6', comingSoon: false },
-    { title: 'Checkmate Clash', image: 'https://i.postimg.cc/2Sh7hB6y/Whats-App-Image-2025-09-20-at-14-07-44-0c6a75a1.jpg', description: 'Chess tournament.', formLink: 'https://forms.gle/CZQdsSx4RzujqApN8', comingSoon: false },
-     { title: 'Power Throw', image: 'https://i.postimg.cc/x816PjZ7/IMG-20250920-WA0023.jpg', description: 'Throw ball contest.', formLink: 'https://forms.gle/tRdRZDu25MZhJCVt7', comingSoon: false },
-    { title: 'Striker Shots', image: 'https://images.unsplash.com/photo-1652558973183-a3f046921163?q=80&w=2081&auto=format&fit=crop', description: 'Carrom board competition.', formLink: 'https://forms.gle/54RgfxgosCAW1fVc8', comingSoon: false },
-    { title: 'Rope Rumble', image: 'https://i.postimg.cc/rpGgXtX3/IMG-20250920-WA0019.jpg', description: 'Tug of war competition.', formLink: 'https://forms.gle/HAz6LAmUVeHXhHjk8', comingSoon: false},
-    { title: 'Zesty Race', image: 'https://m.media-amazon.com/images/I/71oJ4Nl22OL._UF350,350_QL80_.jpg', description: 'Fun relay or sprint race (girls only).', formLink: 'https://forms.gle/ED8z1YeaUSVeLtPk7', comingSoon: false },
-    { title: 'Chair Chase', image: 'https://i.postimg.cc/3JyBrqQg/IMG-20250920-WA0016.jpg', description: 'Musical chair game (girls only).', formLink: 'https://forms.gle/ED8z1YeaUSVeLtPk7', comingSoon: false},
-    { title: "Smash n' Dash", image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXRnKM7rn9bIKH2g_28DbaISKrGomLfBTpPQ&s', description: 'Badminton matches.', formLink: 'https://forms.gle/hsYxTVY1qptfVmYj6', comingSoon: false }
+    { title: 'Gully Cricket', image: 'https://images.unsplash.com/photo-1709233955550-1a316eab4974?q=80&w=1974&auto=format&fit=crop', description: 'Street cricket event.', formLink: 'https://forms.gle/FYZnVtbfFMXnVfoG6', comingSoon: false, date: '#', time: '#', venue: '#', closed: true },
+    { title: 'Power Throw', image: 'https://i.postimg.cc/x816PjZ7/IMG-20250920-WA0023.jpg', description: 'Throw ball contest.', formLink: 'https://forms.gle/tRdRZDu25MZhJCVt7', comingSoon: false, date: '#', time: '#', venue: '#' , closed: true},
+    { title: 'Checkmate Clash', image: 'https://i.postimg.cc/2Sh7hB6y/Whats-App-Image-2025-09-20-at-14-07-44-0c6a75a1.jpg', description: 'Chess tournament.', formLink: 'https://forms.gle/CZQdsSx4RzujqApN8', comingSoon: false, date: '#', time: '#', venue: '#' },
+    { title: 'Striker Shots', image: 'https://images.unsplash.com/photo-1652558973183-a3f046921163?q=80&w=2081&auto=format&fit=crop', description: 'Carrom board competition.', formLink: 'https://forms.gle/54RgfxgosCAW1fVc8', comingSoon: false, date: '#', time: '#', venue: '#' },
+    { title: 'Rope Rumble', image: 'https://i.postimg.cc/rpGgXtX3/IMG-20250920-WA0019.jpg', description: 'Tug of war competition.', formLink: 'https://forms.gle/HAz6LAmUVeHXhHjk8', comingSoon: false, date: '#', time: '#', venue: '#' },
+    { title: 'Zesty Race', image: 'https://m.media-amazon.com/images/I/71oJ4Nl22OL._UF350,350_QL80_.jpg', description: 'Fun relay or sprint race (girls only).', formLink: 'https://forms.gle/ED8z1YeaUSVeLtPk7', comingSoon: false, date: '#', time: '#', venue: '#' },
+    { title: 'Chair Chase', image: 'https://i.postimg.cc/3JyBrqQg/IMG-20250920-WA0016.jpg', description: 'Musical chair game (girls only).', formLink: 'https://forms.gle/ED8z1YeaUSVeLtPk7', comingSoon: false, date: '#', time: '#', venue: '#' },
+    { title: "Smash n' Dash", image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXRnKM7rn9bIKH2g_28DbaISKrGomLfBTpPQ&s', description: 'Badminton matches.', formLink: 'https://forms.gle/hsYxTVY1qptfVmYj6', comingSoon: false, date: '#', time: '#', venue: '#' }
   ];
 
-const RenderCard = ({ event }) => {
-  const isSoon = !!event.comingSoon;
-  const isHot = !!event.hot;
-  const isClosed = !!event.closed;
+  const RenderCard = ({ event }) => {
+    const isSoon = !!event.comingSoon;
+    const isHot = !!event.hot;
+    const isClosed = !!event.closed;
 
-  return (
-    <div
-      className={`event-card ${isSoon ? "is-coming-soon" : ""} ${
-        isHot ? "hot-event" : ""
-      } ${isClosed ? "is-closed" : ""}`}
-      style={{ position: "relative" }}
-      aria-hidden={isSoon || isClosed}
-    >
-      {/* CLOSED visuals */}
-      {isClosed && (
-        <>
-          <div
-            aria-hidden="true"
-            style={{
-              position: "absolute",
-              left: "-10%",
-              top: "45%",
-              width: "120%",
-              height: "3px",
-              background:
-                "linear-gradient(90deg, rgba(255,0,0,0.95), rgba(255,0,0,0.75))",
-              transform: "rotate(-3deg)",
-              zIndex: 60,
-              pointerEvents: "none",
-            }}
-          />
-          <div
-            className="event-closed-badge"
-            style={{
-              position: "absolute",
-              top: "10px",
-              right: "10px",
-              zIndex: 70,
-              background: "linear-gradient(90deg,#ff4b4b,#ff2d2d)",
-              color: "white",
-              padding: "6px 10px",
-              borderRadius: "14px",
-              fontWeight: 800,
-              boxShadow: "0 6px 18px rgba(255,0,0,0.12)",
-            }}
-            aria-hidden="true"
-          >
-            Event Closed
-          </div>
-        </>
-      )}
-
-      {/* 🔥 Hot badge */}
-      {isHot && !isClosed && (
-        <div className="event-badge" aria-hidden="true">
-          🔥 Hot Event
-        </div>
-      )}
-
-      {/* IMAGE area */}
-      <div className="event-visual">
-        <img
-          src={
-            event.image ||
-            "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
-          }
-          alt={event.title}
-          onError={handleImageError}
-        />
-
-        {/* overlay title at bottom of image */}
-        <div className="visual-overlay" aria-hidden="true">
-          <h4
-            className="overlay-title"
-            style={
-              isClosed
-                ? {
-                    margin: 0,
-                    textDecoration: "line-through",
-                    textDecorationColor: "rgba(255,0,0,0.95)",
-                    textDecorationThickness: "3px",
-                    color: "rgba(255,120,120,0.95)",
-                  }
-                : { margin: 0 }
-            }
-          >
-            {event.title}
-          </h4>
-        </div>
-      </div>
-
-      {/* BELOW IMAGE */}
-      <div className="event-meta">
-        {/* DATE */}
-        {event.date && event.date !== "#" && (
-          <div
-            className="event-date"
-            style={{
-              fontSize: "0.95rem",
-              color: "rgba(255,255,255,0.85)",
-              marginTop: 4,
-              fontWeight: 700,
-            }}
-          >
-            Date: {event.date}
-          </div>
-        )}
-
-        {/* Hot prize details */}
-        {isHot && event.prize && !isClosed && (
-          <h3 className="prize-heading">
-            Winning Prize <span className="prize-amount">{event.prize}</span>
-          </h3>
-        )}
-        {isHot && event.prizeTail && !isClosed && (
-          <div className="prize-tail">{event.prizeTail}</div>
-        )}
-        {isHot && !isClosed && (
-          <div className="register-hint">
-            This Event is Open for All Branches! Click Register to know more
-          </div>
-        )}
-
-        {/* Description (only for non-hot, non-closed) */}
-        {!isHot && !isClosed && (
-          <p className="event-desc">{event.description}</p>
-        )}
-
-        {/* Register / Closed button */}
-        <div className="actions-row">
-          {!isSoon && !isClosed ? (
-            <a
-              className="register-btn"
-              href={normalizeUrl(event.formLink)}
-              target="_blank"
-              rel="noopener noreferrer"
-              role="button"
-              aria-label={`Register for ${event.title}`}
+    return (
+      <div
+        className={`event-card ${isSoon ? "is-coming-soon" : ""} ${
+          isHot ? "hot-event" : ""
+        } ${isClosed ? "is-closed" : ""}`}
+        style={{ position: "relative" }}
+        aria-hidden={isSoon || isClosed}
+      >
+        {/* CLOSED visuals */}
+        {isClosed && (
+          <>
+            <div
+              aria-hidden="true"
+              style={{
+                position: "absolute",
+                left: "-10%",
+                top: "45%",
+                width: "120%",
+                height: "3px",
+                background:
+                  "linear-gradient(90deg, rgba(255,0,0,0.95), rgba(255,0,0,0.75))",
+                transform: "rotate(-3deg)",
+                zIndex: 60,
+                pointerEvents: "none",
+              }}
+            />
+            <div
+              className="event-closed-badge"
+              style={{
+                position: "absolute",
+                top: "10px",
+                right: "10px",
+                zIndex: 70,
+                background: "linear-gradient(90deg,#ff4b4b,#ff2d2d)",
+                color: "white",
+                padding: "6px 10px",
+                borderRadius: "14px",
+                fontWeight: 800,
+                boxShadow: "0 6px 18px rgba(255,0,0,0.12)",
+              }}
+              aria-hidden="true"
             >
-              {event.cta || "Register Now"}
-            </a>
-          ) : (
-            <button
-              className="register-btn disabled"
-              aria-disabled="true"
-              tabIndex={-1}
+              Event Closed
+            </div>
+          </>
+        )}
+
+        {/* 🔥 Hot badge */}
+        {isHot && !isClosed && (
+          <div className="event-badge" aria-hidden="true">
+            🔥 Hot Event
+          </div>
+        )}
+
+        {/* IMAGE area */}
+        <div className="event-visual">
+          <img
+            src={
+              event.image ||
+              "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
+            }
+            alt={event.title}
+            onError={handleImageError}
+          />
+          {/* overlay title at bottom of image */}
+          <div className="visual-overlay" aria-hidden="true">
+            <h4
+              className="overlay-title"
               style={
                 isClosed
                   ? {
-                      background: "linear-gradient(90deg,#ff9a9a,#ff4b4b)",
-                      color: "#fff",
+                      margin: 0,
+                      textDecoration: "line-through",
+                      textDecorationColor: "rgba(255,0,0,0.95)",
+                      textDecorationThickness: "3px",
+                      color: "rgba(255,120,120,0.95)",
                     }
-                  : {}
+                  : { margin: 0 }
               }
             >
-              {isClosed ? "Event Closed" : "Register"}
-            </button>
-          )}
+              {event.title}
+            </h4>
+          </div>
         </div>
-      </div>
 
-      {/* COMING SOON Overlay */}
-      {isSoon && (
-        <div className="coming-soon-overlay">
-          <span>Coming Soon</span>
+        {/* BELOW IMAGE */}
+        <div className="event-meta">
+          {/* DATE / TIME / VENUE block (shows only if values present and not '#') */}
+          {( (event.date && event.date !== "#") ||
+             (event.time && event.time !== "#") ||
+             (event.venue && event.venue !== "#")
+          ) && (
+            <div className="event-info" style={{ display: 'flex', gap: '12px', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', marginBottom: 6 }}>
+              {event.date && event.date !== "#" && (
+                <div className="event-date" style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.9)', fontWeight: 700 }}>
+                  📅 {event.date}
+                </div>
+              )}
+              {event.time && event.time !== "#" && (
+                <div className="event-time" style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.9)', fontWeight: 700 }}>
+                  ⏰ {event.time}
+                </div>
+              )}
+              {event.venue && event.venue !== "#" && (
+                <div className="event-venue" style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.9)', fontWeight: 700 }}>
+                  📍 {event.venue}
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Hot prize details */}
+          {isHot && event.prize && !isClosed && (
+            <h3 className="prize-heading">
+              Winning Prize <span className="prize-amount">{event.prize}</span>
+            </h3>
+          )}
+
+          {isHot && event.prizeTail && !isClosed && (
+            <div className="prize-tail">{event.prizeTail}</div>
+          )}
+
+          {isHot && !isClosed && (
+            <div className="register-hint">
+              This Event is Open for All Branches! Click Register to know more
+            </div>
+          )}
+
+          {/* Description (only for non-hot, non-closed) */}
+          {!isHot && !isClosed && (
+            <p className="event-desc">{event.description}</p>
+          )}
+
+          {/* Register / Closed button */}
+          <div className="actions-row">
+            {!isSoon && !isClosed ? (
+              <a
+                className="register-btn"
+                href={normalizeUrl(event.formLink)}
+                target="_blank"
+                rel="noopener noreferrer"
+                role="button"
+                aria-label={`Register for ${event.title}`}
+              >
+                {event.cta || "Register Now"}
+              </a>
+            ) : (
+              <button
+                className="register-btn disabled"
+                aria-disabled="true"
+                tabIndex={-1}
+                style={
+                  isClosed
+                    ? {
+                        background: "linear-gradient(90deg,#ff9a9a,#ff4b4b)",
+                        color: "#fff"
+                      }
+                    : {}
+                }
+              >
+                {isClosed ? "Event Closed" : "Register"}
+              </button>
+            )}
+          </div>
         </div>
-      )}
-    </div>
-  );
-};
+
+        {/* COMING SOON Overlay */}
+        {isSoon && (
+          <div className="coming-soon-overlay">
+            <span>Coming Soon</span>
+          </div>
+        )}
+      </div>
+    );
+  };
+
   const MobileView = () => (
     <>
       <div ref={boysEventsRef} className="events-section">

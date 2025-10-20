@@ -75,7 +75,7 @@ const Technical = () => {
       description: 'Rover design challenge (individual).',
       formLink: 'https://forms.gle/eNK7NP4pNHtuYqGq5',
       comingSoon: false,
-      hot: true, cta: 'Register Now', prize: 'Cashprizes + memento',
+      // hot: true, cta: 'Register Now', prize: 'Cashprizes + memento',
       // date: '12th October, 2025'
     },
     {
