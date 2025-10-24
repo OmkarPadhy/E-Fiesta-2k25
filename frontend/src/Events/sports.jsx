@@ -48,26 +48,28 @@ const Sports = () => {
 
   // Events: title, image, description, formLink, comingSoon, date, time, venue, closed, hot, prize, prizeTail, cta
   const boysEvents = [
-    { title: 'Smash Cricket (ECE Only)', image: 'https://i.postimg.cc/63Y0TJQh/IMG-20250920-WA0013.jpg', description: 'Box cricket / turf cricket event.', formLink: 'https://forms.gle/dhQoeZjL9KgDPrz69', comingSoon: false, closed: true, date: '#', time: '#', venue: '#' },
-    { title: 'Gully Cricket', image: 'https://i.postimg.cc/gkpqnnt5/Gully-cricket.png', description: 'Street cricket tournament.', formLink: 'https://forms.gle/F77LMU4Snk5D44VF6', comingSoon: false, closed: true, date: '#', time: '#', venue: '#' },
-    { title: 'Checkmate Clash', image: 'https://i.postimg.cc/2Sh7hB6y/Whats-App-Image-2025-09-20-at-14-07-44-0c6a75a1.jpg', description: 'Chess tournament.', formLink: 'https://forms.gle/CZQdsSx4RzujqApN8', comingSoon: false, date: '#', time: '#', venue: '#' },
-    { title: 'Striker Shots', image: 'https://images.unsplash.com/photo-1652558973183-a3f046921163?q=80&w=2081&auto=format&fit=crop', description: 'Carrom board competition.', formLink: 'https://forms.gle/EKhA9EqKZyFZFSkP6', comingSoon: false, date: '#', time: '#', venue: '#' },
-    { title: 'Rope Rumble', image: 'https://i.postimg.cc/rpGgXtX3/IMG-20250920-WA0019.jpg', description: 'Tug of war competition.', formLink: 'https://forms.gle/HAz6LAmUVeHXhHjk8', comingSoon: false, date: '#', time: '#', venue: '#' },
-    { title: 'Satolia (7 Stones)', image: 'https://upload.wikimedia.org/wikipedia/commons/b/be/Dabba_Kali2.jpg', description: 'Seven stones (traditional Indian outdoor game).', formLink: 'https://forms.gle/BFDkr2QN4KfeFSBi8', comingSoon: false, date: '#', time: '#', venue: '#' },
+  { title: 'Satolia (7 Stones)', image: 'https://upload.wikimedia.org/wikipedia/commons/b/be/Dabba_Kali2.jpg', description: 'Seven stones (traditional Indian outdoor game).', formLink: 'https://forms.gle/BFDkr2QN4KfeFSBi8', comingSoon: false, date: '#', time: '#', venue: '#' },
     { title: "Smash n' Dash", image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXRnKM7rn9bIKH2g_28DbaISKrGomLfBTpPQ&s', description: 'Badminton matches.', formLink: 'https://forms.gle/Dfh5EXMERiPg9eDQA', comingSoon: false, date: '#', time: '#', venue: '#' },
     { title: 'Volley Vibes', image: 'https://i.postimg.cc/fyqBqnnb/IMG-20250920-WA0026.jpg', description: 'Volleyball competition.', formLink: 'https://forms.gle/QEQNtDUsq15X98Cj8', comingSoon: false, date: '#', time: '#', venue: '#' },
+    { title: 'Smash Cricket (ECE Only)', image: 'https://i.postimg.cc/63Y0TJQh/IMG-20250920-WA0013.jpg', description: 'Box cricket / turf cricket event.', formLink: 'https://forms.gle/dhQoeZjL9KgDPrz69', comingSoon: false, closed: true, date: '#', time: '#', venue: '#' },
+    { title: 'Gully Cricket', image: 'https://i.postimg.cc/gkpqnnt5/Gully-cricket.png', description: 'Street cricket tournament.', formLink: 'https://forms.gle/F77LMU4Snk5D44VF6', comingSoon: false, closed: true, date: '#', time: '#', venue: '#'  },
+    { title: 'Checkmate Clash', image: 'https://i.postimg.cc/2Sh7hB6y/Whats-App-Image-2025-09-20-at-14-07-44-0c6a75a1.jpg', description: 'Chess tournament.', formLink: 'https://forms.gle/CZQdsSx4RzujqApN8', comingSoon: false,closed: true, date: '#', time: '#', venue: '#' },
+    { title: 'Striker Shots', image: 'https://images.unsplash.com/photo-1652558973183-a3f046921163?q=80&w=2081&auto=format&fit=crop', description: 'Carrom board competition.', formLink: 'https://forms.gle/EKhA9EqKZyFZFSkP6', comingSoon: false,closed: true, date: '#', time: '#', venue: '#' },
+    { title: 'Rope Rumble', image: 'https://i.postimg.cc/rpGgXtX3/IMG-20250920-WA0019.jpg', description: 'Tug of war competition.', formLink: 'https://forms.gle/HAz6LAmUVeHXhHjk8', comingSoon: false,closed: true, date: '#', time: '#', venue: '#' },
+    
     { title: 'Khel Kabaddi (ECE Only)', image: 'https://sc0.blr1.cdn.digitaloceanspaces.com/article/204120-pjgcfidsfz-1729917365.jpg', description: 'Traditional kabaddi match.', formLink: 'https://forms.gle/5AyAjefWiMqqj3yp9', comingSoon: false, closed: true, date: '#', time: '#', venue: '#' },
   ];
 
   const girlsEvents = [
+  { title: 'Zesty Race', image: 'https://m.media-amazon.com/images/I/71oJ4Nl22OL._UF350,350_QL80_.jpg', description: 'Fun relay or sprint race (girls only).', formLink: 'https://forms.gle/ED8z1YeaUSVeLtPk7', comingSoon: false, date: '#', time: '#', venue: '#' },
+    { title: 'Chair Chase', image: 'https://i.postimg.cc/3JyBrqQg/IMG-20250920-WA0016.jpg', description: 'Musical chair game (girls only).', formLink: 'https://forms.gle/ED8z1YeaUSVeLtPk7', comingSoon: false, date: '#', time: '#', venue: '#' },
+    { title: "Smash n' Dash", image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXRnKM7rn9bIKH2g_28DbaISKrGomLfBTpPQ&s', description: 'Badminton matches.', formLink: 'https://forms.gle/hsYxTVY1qptfVmYj6', comingSoon: false, date: '#', time: '#', venue: '#' },
     { title: 'Gully Cricket', image: 'https://images.unsplash.com/photo-1709233955550-1a316eab4974?q=80&w=1974&auto=format&fit=crop', description: 'Street cricket event.', formLink: 'https://forms.gle/FYZnVtbfFMXnVfoG6', comingSoon: false, date: '#', time: '#', venue: '#', closed: true },
     { title: 'Power Throw', image: 'https://i.postimg.cc/x816PjZ7/IMG-20250920-WA0023.jpg', description: 'Throw ball contest.', formLink: 'https://forms.gle/tRdRZDu25MZhJCVt7', comingSoon: false, date: '#', time: '#', venue: '#' , closed: true},
-    { title: 'Checkmate Clash', image: 'https://i.postimg.cc/2Sh7hB6y/Whats-App-Image-2025-09-20-at-14-07-44-0c6a75a1.jpg', description: 'Chess tournament.', formLink: 'https://forms.gle/CZQdsSx4RzujqApN8', comingSoon: false, date: '#', time: '#', venue: '#' },
-    { title: 'Striker Shots', image: 'https://images.unsplash.com/photo-1652558973183-a3f046921163?q=80&w=2081&auto=format&fit=crop', description: 'Carrom board competition.', formLink: 'https://forms.gle/nn5uqV6eVaKWFsTB8', comingSoon: false, date: '#', time: '#', venue: '#' },
-    { title: 'Rope Rumble', image: 'https://i.postimg.cc/rpGgXtX3/IMG-20250920-WA0019.jpg', description: 'Tug of war competition.', formLink: 'https://forms.gle/HAz6LAmUVeHXhHjk8', comingSoon: false, date: '#', time: '#', venue: '#' },
-    { title: 'Zesty Race', image: 'https://m.media-amazon.com/images/I/71oJ4Nl22OL._UF350,350_QL80_.jpg', description: 'Fun relay or sprint race (girls only).', formLink: 'https://forms.gle/ED8z1YeaUSVeLtPk7', comingSoon: false, date: '#', time: '#', venue: '#' },
-    { title: 'Chair Chase', image: 'https://i.postimg.cc/3JyBrqQg/IMG-20250920-WA0016.jpg', description: 'Musical chair game (girls only).', formLink: 'https://forms.gle/ED8z1YeaUSVeLtPk7', comingSoon: false, date: '#', time: '#', venue: '#' },
-    { title: "Smash n' Dash", image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXRnKM7rn9bIKH2g_28DbaISKrGomLfBTpPQ&s', description: 'Badminton matches.', formLink: 'https://forms.gle/hsYxTVY1qptfVmYj6', comingSoon: false, date: '#', time: '#', venue: '#' }
+    { title: 'Checkmate Clash', image: 'https://i.postimg.cc/2Sh7hB6y/Whats-App-Image-2025-09-20-at-14-07-44-0c6a75a1.jpg', description: 'Chess tournament.', formLink: 'https://forms.gle/CZQdsSx4RzujqApN8', comingSoon: false,closed: true, date: '#', time: '#', venue: '#' },
+    { title: 'Striker Shots', image: 'https://images.unsplash.com/photo-1652558973183-a3f046921163?q=80&w=2081&auto=format&fit=crop', description: 'Carrom board competition.', formLink: 'https://forms.gle/nn5uqV6eVaKWFsTB8', comingSoon: false,closed: true, date: '#', time: '#', venue: '#' },
+    { title: 'Rope Rumble', image: 'https://i.postimg.cc/rpGgXtX3/IMG-20250920-WA0019.jpg', description: 'Tug of war competition.', formLink: 'https://forms.gle/HAz6LAmUVeHXhHjk8', comingSoon: false,closed: true, date: '#', time: '#', venue: '#' },
+    
   ];
 
   const RenderCard = ({ event }) => {

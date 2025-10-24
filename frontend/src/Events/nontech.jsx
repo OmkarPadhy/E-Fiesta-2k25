@@ -31,31 +31,17 @@ const NonTech = () => {
       formLink: 'https://forms.gle/v58YY3LxjfWuUDRf8',
       comingSoon: false
     },
-    
-    {
-      title: 'Garena Free Fire',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbd6CYFvIaGJR7eWiE8C5O90bTBcrs9OUmcw&s',
-      description: 'Mobile gaming competition.',
-      formLink: 'https://forms.gle/xjYi3SMRUvVrN64V7',
-      comingSoon: false,
-      // date: '21st October 2025', time: '5pm Onwards', venue: 'EC 01 and EC 02'
-    },
     {
       title: 'Call of Duty Mobile',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl1z3tix-iwsfOunz9g4IgwYkBShNTTXFM0w&s',
       description: 'Mobile gaming competition.',
       formLink: 'https://forms.gle/TFAC9AhTSkyNPjf68',
       comingSoon: false,
+      
       // date: '22nd October 2025', time: '5pm Onwards', venue: 'EC 01 and EC 02'
     },
-    {
-      title: 'BGMI',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtlfdp9p1PTPt4Br9EEsrEic70YBF-gxlmwg&s',
-      description: 'Mobile gaming competition.',
-      formLink: 'https://forms.gle/nJTzwd7m9yFkEe8P8',
-      comingSoon: false,
-      // date: '23rd October 2025', time: '5pm Onwards', venue: 'EC 01 and EC 02'
-    },
+    
+    
     {
       title: 'Henna Hues',
       image: 'https://i.postimg.cc/QtXmXxjt/IMG-20250920-WA0011.jpg',
@@ -105,20 +91,20 @@ const NonTech = () => {
     //   formLink: '#',
     //   comingSoon: true
     // },
-    // {
-    //   title: 'ShutterUp',
-    //   image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGepdAwjoHMUOYLULFGtgFl8OeTBJdwBCrxw&s',
-    //   description: 'Photography contest.',
-    //   formLink: '#',
-    //   comingSoon: true
-    // },
-    // {
-    //   title: 'CineCraze',
-    //   image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbg61sUYl8tON24KxoP02VJg8a4J_1kBDTWA&s',
-    //   description: 'Movie quiz, dubbing, or short film contest.',
-    //   formLink: '#',
-    //   comingSoon: true
-    // },
+    {
+      title: 'ShutterUp',
+      image: 'https://i.postimg.cc/3wM10QMX/Whats-App-Image-2025-10-24-at-11-19-55-097af2f4.jpg',
+      description: 'Photography contest.',
+      formLink: 'https://forms.gle/Na3qB3QSHqnF7n6L8',
+      comingSoon: false
+    },
+    {
+      title: 'CineCraze',
+      image: 'https://i.postimg.cc/VNyg0PyB/Whats-App-Image-2025-10-24-at-11-19-40-2e87ac3a.jpg',
+      description: 'Movie quiz, dubbing, or short film contest.',
+      formLink: 'https://forms.gle/VSaeeBA56LjMs27c9',
+      comingSoon: false
+    },
     // {
     //   title: 'Valorant',
     //   image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNx1L9EcNy1zZo6qUExYPdEAeVs0ZBHH7YGg&s',
@@ -132,6 +118,24 @@ const NonTech = () => {
       description: 'Best out of waste creativity challenge.',
       formLink: 'https://forms.gle/yfnoYVJ33XKdzMyY6',
       comingSoon: false
+    },
+    {
+      title: 'Garena Free Fire',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbd6CYFvIaGJR7eWiE8C5O90bTBcrs9OUmcw&s',
+      description: 'Mobile gaming competition.',
+      formLink: 'https://forms.gle/xjYi3SMRUvVrN64V7',
+      comingSoon: false,
+      closed: true,
+      // date: '21st October 2025', time: '5pm Onwards', venue: 'EC 01 and EC 02'
+    },
+    {
+      title: 'BGMI',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtlfdp9p1PTPt4Br9EEsrEic70YBF-gxlmwg&s',
+      description: 'Mobile gaming competition.',
+      formLink: 'https://forms.gle/nJTzwd7m9yFkEe8P8',
+      comingSoon: false,
+      closed: true,
+      // date: '23rd October 2025', time: '5pm Onwards', venue: 'EC 01 and EC 02'
     }
   ];
 

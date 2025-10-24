@@ -51,29 +51,20 @@ const Technical = () => {
       formLink: 'https://forms.gle/tZA2QE3W5FS7qdEC7',
       comingSoon: false,
     },
+    // {
+    //   title: 'Sand Rover',
+    //   image: 'https://i.ytimg.com/vi/x6S3Y9PMUVs/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBzoDEIURLrMwQMfJluzdmlzrH6tQ',
+    //   description: 'Robo-war / combat robot event.',
+    //   formLink: 'https://forms.gle/DKC6NKhxDzcQpAx8A',
+    //   comingSoon: true,
+    //   // hot: true, cta: 'Register Now', prize: 'Cashprizes + memento',
+    //   // date: '23nd September, 2025'
+    // },
     {
-      title: 'Task Master',
-      image: 'https://ai.thestempedia.com/wp-content/uploads/2023/05/Soccer-Robot-Cover.jpg',
-      description: 'Robo-soccer where bots compete to score goals.',
-      formLink: 'https://forms.gle/SmS6QtMfSGV9T9oh8',
-      comingSoon: true,
-      // hot: true, cta: 'Register Now', prize: 'Cashprizes + memento',
-      // date: '22nd September, 2025'
-    },
-    {
-      title: 'Sand Rover',
-      image: 'https://i.ytimg.com/vi/x6S3Y9PMUVs/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBzoDEIURLrMwQMfJluzdmlzrH6tQ',
-      description: 'Robo-war / combat robot event.',
-      formLink: 'https://forms.gle/DKC6NKhxDzcQpAx8A',
-      comingSoon: true,
-      // hot: true, cta: 'Register Now', prize: 'Cashprizes + memento',
-      // date: '23nd September, 2025'
-    },
-    {
-      title: 'Line Follower',
-      image: 'https://quartzcomponents.com/cdn/shop/articles/line-follower-robot-using-arduino_750x.jpg?v=1671189499',
+      title: 'Goal-O-Bot',
+      image: 'https://i.postimg.cc/mrV7DqQg/Sand-rover.jpg',
       description: 'Rover design challenge (individual).',
-      formLink: 'https://forms.gle/eNK7NP4pNHtuYqGq5',
+      formLink: 'https://forms.gle/ZCerPzWYYTWxZLk58',
       comingSoon: false,
       // hot: true, cta: 'Register Now', prize: 'Cashprizes + memento',
       // date: '12th October, 2025'
@@ -99,6 +90,15 @@ const Technical = () => {
       formLink: 'https://forms.gle/rGUJP6ii85KdL8g47',
       comingSoon: false,
     },
+    // {
+    //   title: 'Task Master',
+    //   image: 'https://ai.thestempedia.com/wp-content/uploads/2023/05/Soccer-Robot-Cover.jpg',
+    //   description: 'Robo-soccer where bots compete to score goals.',
+    //   formLink: 'https://forms.gle/SmS6QtMfSGV9T9oh8',
+    //   comingSoon: true,
+    //   // hot: true, cta: 'Register Now', prize: 'Cashprizes + memento',
+    //   // date: '22nd September, 2025'
+    // }
   ];
 
   // Small, reusable card renderer similar to Sports RenderCard
