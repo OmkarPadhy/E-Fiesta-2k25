@@ -16,6 +16,14 @@ const Technical = () => {
 
   // Events list: first 5 are open for registration, the rest are "coming soon"
   const events = [
+  {
+      title: 'Poster Jam',
+      image: 'https://cdn2.slidemodel.com/wp-content/uploads/01-poster-presentation-cover.png',
+      description: 'Idea pitching and presentation competition.',
+      formLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfjRcFwfCdRt54oSRznb-N3KCe8IDzfdE_ZZcD_Ttky8J0uRQ/viewform?usp=sharing&ouid=109265823727437504766',
+      hot: true, cta: 'Register Now', prize: 'Cashprizes + memento',
+      comingSoon: false,
+    },
     {
       title: 'TechSpark: Ignite Ideas',
       image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop',
@@ -166,7 +174,7 @@ const Technical = () => {
         {isHot && event.prizeTail && <div className="prize-tail">{event.prizeTail}</div>}
         {isHot && (
           <div className="register-hint">
-            This Event is Open for All Branches! Click on Register button to know more  
+            This Event is free to Register , and open to all branches  
           </div>
         )}
 
