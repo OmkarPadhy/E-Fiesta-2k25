@@ -5,6 +5,8 @@ import './home.css';
 import welcomeVideo from './assets/videoplayback.mp4';
 import 'remixicon/fonts/remixicon.css';
 import Developer from './pages/developer';
+import GlobalAnnouncement from './GlobalAnnouncement';
+
 
 const Main = () => {
     const location = useLocation();
@@ -48,7 +50,7 @@ const Main = () => {
     useEffect(() => {
         // Countdown timer logic
         const countdownElement = document.querySelector('.countdown');
-const eventDate = Date.UTC(2025, 9, 30, 2, 30, 0); // 9 = October (months are 0-based), 2:30 UTC = 8:00 IST
+const eventDate = Date.UTC(2025, 10, 29, 2, 30, 0); // 10 = November (months are 0-based), 2:30 UTC = 8:00 IST
 
 
 
@@ -196,6 +198,7 @@ const eventDate = Date.UTC(2025, 9, 30, 2, 30, 0); // 9 = October (months are 0-
     return (
         <div className="main-container">
             <Navbar />
+            <GlobalAnnouncement />
             
             {/* Welcome Section */}
             <section id="home" className="welcome-section" ref={homeRef}>
@@ -334,6 +337,8 @@ const eventDate = Date.UTC(2025, 9, 30, 2, 30, 0); // 9 = October (months are 0-
         </div>
     );
 };
+
+
 
 
 export default Main;
