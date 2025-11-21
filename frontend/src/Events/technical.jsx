@@ -16,14 +16,7 @@ const Technical = () => {
 
   // Events list: first 5 are open for registration, the rest are "coming soon"
   const events = [
-  {
-      title: 'Poster Jam',
-      image: 'https://cdn2.slidemodel.com/wp-content/uploads/01-poster-presentation-cover.png',
-      description: 'Idea pitching and presentation competition.',
-      formLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfjRcFwfCdRt54oSRznb-N3KCe8IDzfdE_ZZcD_Ttky8J0uRQ/viewform?usp=sharing&ouid=109265823727437504766',
-      hot: true, cta: 'Register Now', prize: 'Cashprizes + memento',
-      comingSoon: false,
-    },
+  
     {
       title: 'TechSpark: Ignite Ideas',
       image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop',
@@ -45,13 +38,7 @@ const Technical = () => {
       formLink: 'https://forms.gle/WZAZ74JyDCDczWct8',
       comingSoon: false,
     },
-    {
-      title: 'Techno-Quiz',
-      image: 'https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=2070&auto=format&fit=crop',
-      description: 'Quiz on science, engineering, and current technology trends.',
-      formLink: 'https://forms.gle/tLGT6cD5duLwj83G6',
-      comingSoon: false,
-    },
+    
     {
       title: 'Gizmo Expo',
       image: 'https://i.postimg.cc/pXy0hTz5/IMG-20250920-WA0025.jpg',
@@ -77,13 +64,7 @@ const Technical = () => {
       // hot: true, cta: 'Register Now', prize: 'Cashprizes + memento',
       // date: '12th October, 2025'
     },
-    {
-      title: 'PowerPlay Proteus',
-      image: 'https://i.postimg.cc/Kvd515mC/IMG-20250920-WA0015.jpg',
-      description: 'Simulation / design event using Proteus software.',
-      formLink: 'https://forms.gle/AKXhUzbztduv6jp97',
-      comingSoon: false,
-    },
+    //
     {
       title: 'VLSI Cadence Tool Competition',
       image: 'https://mms.businesswire.com/media/20230419005232/en/1767574/4/J15686_Virtuoso_SM_1080x1080_(1).jpg',
@@ -98,15 +79,37 @@ const Technical = () => {
       formLink: 'https://forms.gle/rGUJP6ii85KdL8g47',
       comingSoon: false,
     },
-    // {
-    //   title: 'Task Master',
-    //   image: 'https://ai.thestempedia.com/wp-content/uploads/2023/05/Soccer-Robot-Cover.jpg',
-    //   description: 'Robo-soccer where bots compete to score goals.',
-    //   formLink: 'https://forms.gle/SmS6QtMfSGV9T9oh8',
-    //   comingSoon: true,
-    //   // hot: true, cta: 'Register Now', prize: 'Cashprizes + memento',
-    //   // date: '22nd September, 2025'
-    // }
+    {
+      title: 'Poster Jam',
+      image: 'https://cdn2.slidemodel.com/wp-content/uploads/01-poster-presentation-cover.png',
+      description: 'Idea pitching and presentation competition.',
+      formLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfjRcFwfCdRt54oSRznb-N3KCe8IDzfdE_ZZcD_Ttky8J0uRQ/viewform?usp=sharing&ouid=109265823727437504766',
+      // hot: true, cta: 'Register Now', prize: 'Cashprizes + memento',
+      comingSoon: true,
+    },
+     {
+      title: 'PowerPlay Proteus',
+      image: 'https://i.postimg.cc/Kvd515mC/IMG-20250920-WA0015.jpg',
+      description: 'Simulation / design event using Proteus software.',
+      formLink: 'https://forms.gle/AKXhUzbztduv6jp97',
+      comingSoon: true,
+    },
+    {
+      title: 'Techno-Quiz',
+      image: 'https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=2070&auto=format&fit=crop',
+      description: 'Quiz on science, engineering, and current technology trends.',
+      formLink: 'https://forms.gle/tLGT6cD5duLwj83G6',
+      comingSoon: true,
+    },
+    {
+      title: 'Task Master',
+      image: 'https://ai.thestempedia.com/wp-content/uploads/2023/05/Soccer-Robot-Cover.jpg',
+      description: 'Robo-soccer where bots compete to score goals.',
+      formLink: 'https://forms.gle/SmS6QtMfSGV9T9oh8',
+      comingSoon: true,
+      // hot: true, cta: 'Register Now', prize: 'Cashprizes + memento',
+      // date: '22nd September, 2025'
+    }
   ];
 
   // Small, reusable card renderer similar to Sports RenderCard

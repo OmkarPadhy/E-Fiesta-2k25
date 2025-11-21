@@ -51,13 +51,13 @@ const Cultural = () => {
       formLink: 'https://forms.gle/z7noNKSQMbzjbLHq9',
       comingSoon: false
     },
-    {
-      title: 'Crowd Craze (Open Stage)',
-      image: 'https://img.freepik.com/premium-psd/open-stage-with-curtain_926121-798.jpg',
-      description: 'Open-stage performances to engage the audience.',
-      formLink: '#',
-      comingSoon: true
-    }
+    // {
+    //   title: 'Crowd Craze (Open Stage)',
+    //   image: 'https://img.freepik.com/premium-psd/open-stage-with-curtain_926121-798.jpg',
+    //   description: 'Open-stage performances to engage the audience.',
+    //   formLink: '#',
+    //   comingSoon: true
+    // }
   ];
 
   const RenderCard = ({ event }) => {

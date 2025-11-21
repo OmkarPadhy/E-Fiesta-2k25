@@ -24,13 +24,7 @@ const NonTech = () => {
 
   // Keep original event data unchanged (as requested)
   const events = [
-    {
-      title: 'Xplore Quest',
-      image: 'https://i.postimg.cc/8Cgw0m3L/IMG-20250920-WA0020.jpg',
-      description: 'Treasure hunt with logical and fun tasks.',
-      formLink: 'https://forms.gle/v58YY3LxjfWuUDRf8',
-      comingSoon: false
-    },
+    
     {
       title: 'Call of Duty Mobile',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl1z3tix-iwsfOunz9g4IgwYkBShNTTXFM0w&s',
@@ -42,13 +36,7 @@ const NonTech = () => {
     },
     
     
-    {
-      title: 'Henna Hues',
-      image: 'https://i.postimg.cc/QtXmXxjt/IMG-20250920-WA0011.jpg',
-      description: 'Creative mehendi/henna art contest.',
-      formLink: 'https://forms.gle/CVJnBh8iEJm2HHPy8',
-      comingSoon: false
-    },
+    
     {
       title: 'Color Splash',
       image: 'https://i.postimg.cc/25YFw8bw/IMG-20250920-WA0031.jpg',
@@ -105,6 +93,7 @@ const NonTech = () => {
       formLink: 'https://forms.gle/VSaeeBA56LjMs27c9',
       comingSoon: false
     },
+    
     // {
     //   title: 'Valorant',
     //   image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNx1L9EcNy1zZo6qUExYPdEAeVs0ZBHH7YGg&s',
@@ -127,6 +116,22 @@ const NonTech = () => {
       comingSoon: false,
       closed: true,
       // date: '21st October 2025', time: '5pm Onwards', venue: 'EC 01 and EC 02'
+    },
+    {
+      title: 'Henna Hues',
+      image: 'https://i.postimg.cc/QtXmXxjt/IMG-20250920-WA0011.jpg',
+      description: 'Creative mehendi/henna art contest.',
+      formLink: 'https://forms.gle/CVJnBh8iEJm2HHPy8',
+      comingSoon: false,
+      closed: true,
+    },
+    {
+      title: 'Xplore Quest',
+      image: 'https://i.postimg.cc/8Cgw0m3L/IMG-20250920-WA0020.jpg',
+      description: 'Treasure hunt with logical and fun tasks.',
+      formLink: 'https://forms.gle/v58YY3LxjfWuUDRf8',
+      comingSoon: false,
+      closed: true
     },
     {
       title: 'BGMI',
