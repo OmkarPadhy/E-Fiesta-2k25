@@ -5,7 +5,7 @@ import './home.css';
 import welcomeVideo from './assets/videoplayback.mp4';
 import 'remixicon/fonts/remixicon.css';
 import Developer from './pages/developer';
-import GlobalAnnouncement from './GlobalAnnouncement';
+// import GlobalAnnouncement from './GlobalAnnouncement';
 
 
 const Main = () => {
@@ -198,7 +198,7 @@ const eventDate = Date.UTC(2025, 10, 29, 2, 30, 0); // 10 = November (months are
     return (
         <div className="main-container">
             <Navbar />
-            <GlobalAnnouncement />
+            {/* <GlobalAnnouncement /> */}
             
             {/* Welcome Section */}
             <section id="home" className="welcome-section" ref={homeRef}>
