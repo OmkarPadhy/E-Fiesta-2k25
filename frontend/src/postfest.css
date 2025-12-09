@@ -1,0 +1,110 @@
+:root{
+  --bg-1:#071025;
+  --bg-2:#0b2a3a;
+  --accent:#00F0FF;
+  --accent-2:#b94cf0;
+  --muted:#bcd;
+}
+
+.pf-root {
+  min-height: 100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:28px;
+  background:linear-gradient(180deg,var(--bg-1),var(--bg-2));
+  color:#fff;
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial;
+}
+
+.pf-card {
+  width:min(1200px,96%);
+  padding:clamp(18px,2.2rem,28px);
+  border-radius:14px;
+  background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));
+  border:1px solid rgba(255,255,255,0.05);
+  box-shadow:0 10px 40px rgba(2,8,23,0.6);
+  backdrop-filter:blur(6px);
+}
+
+.pf-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  align-items:center;
+}
+
+.pf-left {
+  padding:6px 12px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.pf-icon-row {
+  display:flex;
+  gap:16px;
+  align-items:center;
+}
+
+.pf-icon {
+  width:64px;height:64px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:26px;font-weight:800;
+  border-radius:12px;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));
+  box-shadow:0 8px 30px rgba(0,240,255,0.1);
+}
+
+.pf-title {
+  margin:0;
+  font-size:clamp(18px,3vw,34px);
+  letter-spacing:0.3px;
+}
+
+.pf-signer {
+  display:block;
+  margin-top:6px;
+  color:#aacbd6;
+}
+
+.pf-lead {
+  margin:0;
+  font-size:clamp(14px,1.6vw,17px);
+  color:var(--muted);
+  line-height:1.55;
+}
+
+.pf-tags {
+  margin-top:6px;
+  font-size:0.95rem;
+  color:var(--muted);
+  opacity:0.9;
+}
+
+/* RIGHT IMAGE */
+.pf-right {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.pf-logo {
+  width:clamp(600px,75%,720px);
+  border-radius:14px;
+  background:rgba(255,255,255,0.04);
+  padding:18px;
+  object-fit:contain;
+  box-shadow:0 10px 40px rgba(0,0,0,0.35);
+}
+
+/* Responsive */
+@media (max-width:880px){
+  .pf-grid {
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+  .pf-logo {
+    width:clamp(200px,65%,380px);
+  }
+}
