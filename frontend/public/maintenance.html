@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Site Under Maintenance • E-fiesta</title>
+  <style>
+    :root{
+      --bg-1:#071025; --bg-2:#0b2a3a; --accent:#00F0FF; --muted:#bcd;
+      --glass: rgba(255,255,255,0.04);
+    }
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;}
+    body{
+      display:flex;align-items:center;justify-content:center;
+      background: linear-gradient(180deg,var(--bg-1),var(--bg-2));
+      color: #fff;
+    }
+    .card{
+      width: min(920px,92%);
+      padding: clamp(20px,3vw,36px);
+      border-radius:14px;
+      box-shadow: 0 10px 40px rgba(2,8,23,0.6);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.04);
+      backdrop-filter: blur(6px) contrast(0.9);
+    }
+    h1{margin:0 0 6px;font-size:clamp(20px,3.2vw,34px);letter-spacing:0.6px;}
+    p.lead{margin:0 0 18px;color:var(--muted);font-size:clamp(13px,1.6vw,16px)}
+    .notice{
+      display:flex;gap:16px;align-items:center;
+      margin-top:8px;
+    }
+    .dot{
+      width:56px;height:56px;border-radius:10px;
+      background: linear-gradient(135deg,var(--accent),#b94cf0);
+      display:flex;align-items:center;justify-content:center;font-weight:800;
+      box-shadow: 0 8px 30px rgba(0,240,255,0.06);
+      font-size:20px;
+    }
+    .meta{flex:1;}
+    .meta p{margin:0;color:#dceeffcc}
+    .meta small{display:block;margin-top:8px;color:#aacbd6}
+    .actions{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .btn{
+      padding:10px 16px;border-radius:12px;border:0;cursor:pointer;
+      font-weight:700;background:transparent;color:#fff;
+    }
+    .btn.primary{
+      background: linear-gradient(90deg,var(--accent),#b94cf0);
+      color:#051226;box-shadow:0 10px 28px rgba(0,240,224,0.08);
+    }
+    .small{
+      font-size:13px;color:#a8ccd8;margin-top:14px;
+    }
+    @media (max-width:520px){
+      .notice{flex-direction:column;align-items:flex-start}
+      .dot{width:48px;height:48px}
+    }
+  </style>
+</head>
+<body>
+  <div class="card" role="main" aria-labelledby="maintitle">
+    <div class="notice">
+      <div class="dot">⚙</div>
+      <div class="meta">
+        <h1 id="maintitle">Site temporarily unavailable — Work in progress</h1>
+        <p class="lead">The Annual Grand Fest pages are being updated. We’ll be back shortly with fresh updates and schedules.</p>
+        <small>Department of ECE • E-fiesta</small>
+        <div class="actions">
+          <a class="btn primary" href="/" onclick="return false;">Homepage</a>
+          <a class="btn" href="mailto:efiesta23@gmail.com">Contact</a>
+        </div>
+        <div class="small">Tip: If you’re the site admin and need to bring the site live now, restore <code>/index.html</code> or remove the maintenance redirect.</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
